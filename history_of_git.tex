@@ -1,9 +1,11 @@
 
 
+\colorlet{outlinecolor}{icypink}
 
 \begin{tikzpicture}
-	\node [mybox, fill=boxcolor, draw=goldenyellow] (box){%
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
 			\underline{Definition}: A family of parametric, non-linear and hierarchical representation learning functions, which are massively optimized with stochastic gradient descent to encode domain knowledge, i.e. domain invariances, stationarity.\\
 			\vspace{-3mm}
 			\begin{itemize}[leftmargin=4mm]
@@ -24,5 +26,5 @@
 			\end{enumerate}
 		\end{minipage}
 	};
-	\node[fancytitle, right=10pt, fill=boxcolor, text=deeppink, draw=goldenyellow] at (box.north west) {\textbf{Modular Learning}};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=black, draw=outlinecolor, rounded corners] at (box.north west) {History of Git};
 \end{tikzpicture}
