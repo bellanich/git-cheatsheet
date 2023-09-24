@@ -42,20 +42,23 @@
 
 % Define colors
 \definecolor{background}{HTML}{2D2B55}
-\definecolor{text-color}{HTML}{B362FF}
-\definecolor{boxcolor}{HTML}{2D2B55}
+\definecolor{textcolor}{HTML}{FFFFFF} %{FFFFFF}  %{B362FF}
+\definecolor{white}{HTML}{FFFFFF} 
+%\definecolor{boxcolor}{HTML}{2D2B55}
+\colorlet{boxcolor}{background!90}
 
 
-\definecolor{golden-yellow}{HTML}{FAD000}
-\definecolor{highlighter-purple}{HTML}{4D21FC}
+\definecolor{goldenyellow}{HTML}{FAD000}
+\definecolor{lightpurple}{HTML}{A599E9}
+\definecolor{brightpurple}{HTML}{4D21FC} %{B362FF} % 4D21FC
 \definecolor{bright-green}{HTML}{3AD900}
-\definecolor{icy-blue}{HTML}{9EFFFF}
-\definecolor{deep-pink}{HTML}{FF628C}
+\definecolor{icyblue}{HTML}{9EFFFF}
+\definecolor{deeppink}{HTML}{FF628C}
 
 
 % Apply to document
 \pagecolor{background}
-\color{text-color}
+\color{textcolor}
 %%%%%%%%%%%%%%
 
 
@@ -71,7 +74,7 @@
 \begin{document}
 
 \begin{center}
-	\Large{Git Cheat Sheet} \\
+	\LARGE{\textcolor{goldenyellow}{\textbf{Git Cheat Sheet}}} \\
 \end{center}
 
 \footnotesize
