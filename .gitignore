@@ -2,3 +2,6 @@
 *.aux
 *.log
 *.synctex.gz
+
+# MacOS specific ignores
+.DS_Store
