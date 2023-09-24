@@ -1,0 +1,28 @@
+
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=icy-blue] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\underline{Definition}: A family of parametric, non-linear and hierarchical representation learning functions, which are massively optimized with stochastic gradient descent to encode domain knowledge, i.e. domain invariances, stationarity.\\
+			\vspace{-3mm}
+			\begin{itemize}[leftmargin=4mm]
+				\setlength\itemsep{0.0em}
+				\item Neural Network is a directed acyclic graph
+				% \item Every module can be expressed by $a=h(x;w)$
+				\item Use loss function that matches output distribution to improve numerical stability and make gradients larger
+				\item Input and output distribution of every module should be the same to prevent inconsistent behavior and harder learning
+			\end{itemize}
+			\underline{Backprop}: chain rule $\pd{z}{x_i}=\sum_j \chain{z}{y_j}{x_i}$, $\nabla_{\bm{x}} \bm{z} = \left(\pd{\bm{y}}{\bm{x}}\right)^T \cdot \nabla_{\bm{y}} \bm{z}$
+			\vspace{-1mm}
+			\begin{enumerate}[leftmargin=4mm, label=\arabic*.]
+				\setlength\itemsep{0.2em}
+				\item Compute forward: $a^{(l)} = h^{(l)}\left(x^{(l)}\right)$, $x^{(l+1)}=a^{(l)}$
+				\item Compute reverse: $\pd{\loss}{a^{(l)}} = \left(\pd{a^{(l+1)}}{x^{(l+1)}}\right)^T \cdot \pd{\loss}{a^{(l+1)}}$\\
+				$\pd{\loss}{\theta^{(l)}} = \pd{a^{(l)}}{x^{(l+1)}} \cdot \left(\pd{\loss}{a^{(l)}}\right)^T$
+				\item Update params: $\theta^{(l)}_{t+1} = \theta^{(l)}_{t}-\eta \nabla_{\theta_t^{(l)}}\loss$
+			\end{enumerate}
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=icy-blue, text=black] at (box.north west) {Modular Learning};
+\end{tikzpicture}
