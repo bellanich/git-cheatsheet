@@ -1,0 +1,28 @@
+
+
+\colorlet{outlinecolor}{orange}
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			\underline{Source control} is the practice of tracking and managing changes to code. There are two types:
+			\begin{enumerate}
+				\item In \textcolor{outlinecolor}{centralized source control}, a centralized server acts as the ultimate source of truth for a collection of versioned files. 
+				\begin{itemize}
+					\item \textit{Implications.} An internet connection to the central server is required for most basic operations.
+					\item \textit{Examples.} \href{https://subversion.apache.org}{Subversion}, \href{https://cvs.nongnu.org}{CVS}
+				\end{itemize}
+				\item \textcolor{outlinecolor}{Distributed or decentralized source control} doesn't require a central source of truth and allows for most operations to be local.
+				\begin{itemize}
+					\item \textit{Implications.} You can work independently of an internet connection.
+					\item \textit{Examples.} Git, \href{https://www.mercurial-scm.org}{Mercurial (Hg)}
+				\end{itemize}
+			\end{enumerate}
+		
+			
+%		\vspace{-3mm}
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics};
+\end{tikzpicture}
