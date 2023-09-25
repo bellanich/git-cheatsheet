@@ -6,24 +6,36 @@
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
-			\underline{Definition}: A family of parametric, non-linear and hierarchical representation learning functions, which are massively optimized with stochastic gradient descent to encode domain knowledge, i.e. domain invariances, stationarity.\\
-			\vspace{-3mm}
-			\begin{itemize}[leftmargin=4mm]
-				\setlength\itemsep{0.0em}
-				\item Neural Network is a directed acyclic graph
-				% \item Every module can be expressed by $a=h(x;w)$
-				\item Use loss function that matches output distribution to improve numerical stability and make gradients larger
-				\item Input and output distribution of every module should be the same to prevent inconsistent behavior and harder learning
-			\end{itemize}
-			\underline{Backprop}: chain rule $\pd{z}{x_i}=\sum_j \chain{z}{y_j}{x_i}$, $\nabla_{\bm{x}} \bm{z} = \left(\pd{\bm{y}}{\bm{x}}\right)^T \cdot \nabla_{\bm{y}} \bm{z}$
-			\vspace{-1mm}
-			\begin{enumerate}[leftmargin=4mm, label=\arabic*.]
-				\setlength\itemsep{0.2em}
-				\item Compute forward: $a^{(l)} = h^{(l)}\left(x^{(l)}\right)$, $x^{(l+1)}=a^{(l)}$
-				\item Compute reverse: $\pd{\loss}{a^{(l)}} = \left(\pd{a^{(l+1)}}{x^{(l+1)}}\right)^T \cdot \pd{\loss}{a^{(l+1)}}$\\
-				$\pd{\loss}{\theta^{(l)}} = \pd{a^{(l)}}{x^{(l+1)}} \cdot \left(\pd{\loss}{a^{(l)}}\right)^T$
-				\item Update params: $\theta^{(l)}_{t+1} = \theta^{(l)}_{t}-\eta \nabla_{\theta_t^{(l)}}\loss$
+			\underline{Source control} is the practice of tracking and managing changes to code. There are two types:
+			\begin{enumerate}
+				\item In \textcolor{outlinecolor}{centralized source control}, a centralized server acts as the ultimate source of truth for a collection of versioned files. 
+				\begin{itemize}
+					\item \textit{Implications.} An internet connection to the central server is required for most basic operations.
+					\item \textit{Examples.} \href{https://subversion.apache.org}{Subversion}, \href{https://cvs.nongnu.org}{CVS}
+				\end{itemize}
+				\item \textcolor{outlinecolor}{Distributed or decentralized source control} doesn't require a central source of truth and allows for most operations to be local.
+				\begin{itemize}
+					\item \textit{Implications.} You can work independently of an internet connection.
+					\item \textit{Examples.} Git, Mercurial (Hg)
+				\end{itemize}
 			\end{enumerate}
+			\vspace{-3mm}
+%			\begin{itemize}[leftmargin=4mm]
+%				\setlength\itemsep{0.0em}
+%				\item Neural Network is a directed acyclic graph
+%				% \item Every module can be expressed by $a=h(x;w)$
+%				\item Use loss function that matches output distribution to improve numerical stability and make gradients larger
+%				\item Input and output distribution of every module should be the same to prevent inconsistent behavior and harder learning
+%			\end{itemize}
+%			\underline{Backprop}: chain rule $\pd{z}{x_i}=\sum_j \chain{z}{y_j}{x_i}$, $\nabla_{\bm{x}} \bm{z} = \left(\pd{\bm{y}}{\bm{x}}\right)^T \cdot \nabla_{\bm{y}} \bm{z}$
+%			\vspace{-1mm}
+%			\begin{enumerate}[leftmargin=4mm, label=\arabic*.]
+%				\setlength\itemsep{0.2em}
+%				\item Compute forward: $a^{(l)} = h^{(l)}\left(x^{(l)}\right)$, $x^{(l+1)}=a^{(l)}$
+%				\item Compute reverse: $\pd{\loss}{a^{(l)}} = \left(\pd{a^{(l+1)}}{x^{(l+1)}}\right)^T \cdot \pd{\loss}{a^{(l+1)}}$\\
+%				$\pd{\loss}{\theta^{(l)}} = \pd{a^{(l)}}{x^{(l+1)}} \cdot \left(\pd{\loss}{a^{(l)}}\right)^T$
+%				\item Update params: $\theta^{(l)}_{t+1} = \theta^{(l)}_{t}-\eta \nabla_{\theta_t^{(l)}}\loss$
+%			\end{enumerate}
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=black, draw=outlinecolor, rounded corners] at (box.north west) {History of Git};
