@@ -23,7 +23,7 @@
 \usepackage{amsthm, amsmath, amssymb, amsfonts}
 \usepackage{enumitem}
 \usepackage{fontawesome}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 %\title{Git Cheat Sheet}
 \usepackage[english]{babel}
@@ -51,7 +51,7 @@
 \definecolor{lightyellow}{HTML}{FFEE80} 
 \definecolor{lightpurple}{HTML}{A599E9}
 \definecolor{brightpurple}{HTML}{4D21FC} %{B362FF} % 4D21FC
-\definecolor{bright-green}{HTML}{3AD900}
+\definecolor{brightgreen}{HTML}{3AD900}
 \definecolor{icyblue}{HTML}{9EFFFF}
 \definecolor{deeppink}{HTML}{FF628C}
 \definecolor{icypink}{HTML}{FB94FF}
@@ -72,7 +72,12 @@
 \pagestyle{fancy}
 
 \fancyfoot{}  % Clear all footer fields
-\fancyfoot[R]{\faGithub{} GitHub link goes here}
+\fancyfoot[R]{ 
+	\textcolor{lightpurple}{\small{
+	\href{https://github.com/bellanich}{\faGithub{} {bellanich}} \hspace{0.3cm}
+	\href{https://github.com/bellanich}{\faLinkedinSquare{} {bellanich}}
+	}}
+}
 
 
 %%%%%%%%%%%%%%
