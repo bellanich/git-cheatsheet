@@ -6,3 +6,6 @@
 
 # MacOS specific ignores
 .DS_Store
+
+# Repo specific ignore files
+*.pdf
