@@ -16,27 +16,22 @@
 				\item \textcolor{outlinecolor}{Distributed or decentralized source control} doesn't require a central source of truth and allows for most operations to be local.
 				\begin{itemize}
 					\item \textit{Implications.} You can work independently of an internet connection.
-					\item \textit{Examples.} Git, Mercurial (Hg)
+					\item \textit{Examples.} Git, \href{https://www.mercurial-scm.org}{Mercurial (Hg)}
 				\end{itemize}
 			\end{enumerate}
-			\vspace{-3mm}
-%			\begin{itemize}[leftmargin=4mm]
-%				\setlength\itemsep{0.0em}
-%				\item Neural Network is a directed acyclic graph
-%				% \item Every module can be expressed by $a=h(x;w)$
-%				\item Use loss function that matches output distribution to improve numerical stability and make gradients larger
-%				\item Input and output distribution of every module should be the same to prevent inconsistent behavior and harder learning
-%			\end{itemize}
-%			\underline{Backprop}: chain rule $\pd{z}{x_i}=\sum_j \chain{z}{y_j}{x_i}$, $\nabla_{\bm{x}} \bm{z} = \left(\pd{\bm{y}}{\bm{x}}\right)^T \cdot \nabla_{\bm{y}} \bm{z}$
-%			\vspace{-1mm}
-%			\begin{enumerate}[leftmargin=4mm, label=\arabic*.]
-%				\setlength\itemsep{0.2em}
-%				\item Compute forward: $a^{(l)} = h^{(l)}\left(x^{(l)}\right)$, $x^{(l+1)}=a^{(l)}$
-%				\item Compute reverse: $\pd{\loss}{a^{(l)}} = \left(\pd{a^{(l+1)}}{x^{(l+1)}}\right)^T \cdot \pd{\loss}{a^{(l+1)}}$\\
-%				$\pd{\loss}{\theta^{(l)}} = \pd{a^{(l)}}{x^{(l+1)}} \cdot \left(\pd{\loss}{a^{(l)}}\right)^T$
-%				\item Update params: $\theta^{(l)}_{t+1} = \theta^{(l)}_{t}-\eta \nabla_{\theta_t^{(l)}}\loss$
-%			\end{enumerate}
+			
+			
+			
+			\underline{History of Git}: \textcolor{outlinecolor}{Git} was \href{https://www.linuxfoundation.org/blog/blog/10-years-of-git-an-interview-with-git-creator-linus-torvalds}{developed by Linus Torvalds}, the creator of Linux, to handle the requirements of \href{https://github.com/torvalds/linux}{the Linux Kernel Project}. It is often used, because...
+			\begin{enumerate}
+				\item Due to its distributed nature, Git \textcolor{outlinecolor}{can scale massively}.
+				\item Git is \textcolor{outlinecolor}{very fast to execute}, since most of its operations are local.
+				\item Due to its  history, it has a very \textcolor{outlinecolor}{active community}.
+				
+			\end{enumerate}
+			
+%		\vspace{-3mm}
 		\end{minipage}
 	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=black, draw=outlinecolor, rounded corners] at (box.north west) {History of Git};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Source Control};
 \end{tikzpicture}
