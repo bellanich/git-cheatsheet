@@ -6,22 +6,30 @@
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
-			\underline{Source control} is the practice of tracking and managing changes to code. There are two types:
-			\begin{enumerate}
-				\item In \textcolor{outlinecolor}{centralized source control}, a centralized server acts as the ultimate source of truth for a collection of versioned files. 
-				\begin{itemize}
-					\item \textit{Implications.} An internet connection to the central server is required for most basic operations.
-					\item \textit{Examples.} \href{https://subversion.apache.org}{Subversion}, \href{https://cvs.nongnu.org}{CVS}
-				\end{itemize}
-				\item \textcolor{outlinecolor}{Distributed or decentralized source control} doesn't require a central source of truth and allows for most operations to be local.
-				\begin{itemize}
-					\item \textit{Implications.} You can work independently of an internet connection.
-					\item \textit{Examples.} Git, \href{https://www.mercurial-scm.org}{Mercurial (Hg)}
-				\end{itemize}
-			\end{enumerate}
-		
+			\textcolor{outlinecolor}{A repository} is a collection of version controlled files that are kept together. This includes \textbf{(a)} all the files related to a specific project/application, \textbf{(b)} the history of changes, and \textbf{(c)} any special configurations. \\
 			
-%		\vspace{-3mm}
+			\vspace{-1mm}
+			\underline{Git states}: Git has three \textbf{local} states.
+			\begin{enumerate}
+				\item The \textcolor{outlinecolor}{working directory state} holds all the project or application files. These files may or may not be managed by Git, but Git is aware of them.
+				\item The \textcolor{outlinecolor}{staging area state} or \textcolor{outlinecolor}{Git index state} is holding area for the queue of changes to be included in your next commit.
+				\item The \textcolor{outlinecolor}{local Git repository state}  is a hidden folder called \inlinebash{.git}, which contains your entire local commit history.
+			\end{enumerate}
+			Git also has a \textcolor{outlinecolor}{remote (repository) state}, which is just another repository with its own three internal states. \\
+			
+			\begin{minipage}{\textwidth}
+				\centering
+				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
+				\captionof{figure}{Caption for Image 2.}
+			\end{minipage}
+			
+%			\begin{figure}
+%%				\centering
+%				\includegraphics[width=0.8\textwidth]{images/git_stages.png}
+%				\caption{A short caption for the image.}
+%				\label{fig:myimage}
+%			\end{figure}
+%			
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics};
