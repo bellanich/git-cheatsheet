@@ -82,7 +82,9 @@
 %%%%%%%%%%%%%%
 %     Make a footer
 %%%%%%%%%%%%%%
-\geometry{left=0.5cm,right=0.5cm,top=0.25cm,bottom=1.5cm}
+\geometry{left=0.25cm,right=0.25cm,top=0.25cm,bottom=0.6cm, footskip=0pt}
+%\setlength{\footskip}{0pt}
+%\textheight=600pt
 \usepackage{fancyhdr}
 \usepackage[absolute,overlay]{textpos}
 \pagestyle{fancy}
@@ -90,6 +92,7 @@
 \fancyfoot{}  % Clear all footer fields
 \fancyfoot[R]{ 
 	\textcolor{lightpurple}{\small{
+	\vspace{-3cm}
 	\href{https://github.com/bellanich}{\faGithub{} {bellanich}} \hspace{0.3cm}
 	\href{https://www.linkedin.com/in/bella-nicholson}{\faLinkedinSquare{} {bella-nicholson}}
 	}}
@@ -143,6 +146,7 @@
 \tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
 
 \input{history_of_git.tex}
+\vspace{-2mm}
 \input{git_basics.tex}
 
 \end{multicols*}

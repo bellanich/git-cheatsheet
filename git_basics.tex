@@ -2,6 +2,7 @@
 
 \colorlet{outlinecolor}{orange}
 
+
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
@@ -15,22 +16,28 @@
 				\item The \textcolor{outlinecolor}{staging area state} or \textcolor{outlinecolor}{Git index state} is holding area for the queue of changes to be included in your next commit.
 				\item The \textcolor{outlinecolor}{local Git repository state}  is a hidden folder called \inlinebash{.git}, which contains your entire local commit history.
 			\end{enumerate}
-			Git also has a \textcolor{outlinecolor}{remote (repository) state}, which is just another repository with its own three internal states. \\
+			Git also has a \textcolor{outlinecolor}{remote (repository) state}, which is just another repository with its own three internal states. A specific Git command is used to move files between these states. i.e., \\
 			
 			\begin{minipage}{\textwidth}
 				\centering
+%				\vspace{-2mm}
 				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
-				\captionof{figure}{Caption for Image 2.}
+				\vspace{-2mm}
+				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
 			\end{minipage}
 			
-%			\begin{figure}
-%%				\centering
-%				\includegraphics[width=0.8\textwidth]{images/git_stages.png}
-%				\caption{A short caption for the image.}
-%				\label{fig:myimage}
-%			\end{figure}
-%			
+		\vspace{-3mm}
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking, i.e., files that aren't new
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics (2)};
 \end{tikzpicture}
