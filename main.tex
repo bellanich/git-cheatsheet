@@ -37,6 +37,7 @@
 \newcommand{\coderef}[0]{Please find the implementation in the folder with the code files.}
 \newcommand{\TODO}[1]{\textbf{\textcolor{red}{#1}}}
 
+
 %%%%%%%%%%%%%%
 % Shades of purple colors
 %%%%%%%%%%%%%%
@@ -46,7 +47,6 @@
 \definecolor{background}{HTML}{2D2B55}
 \colorlet{boxcolor}{background!90}
 \definecolor{textcolor}{HTML}{FFFFFF} %{FFFFFF}  %{B362FF}
-
 \definecolor{goldenyellow}{HTML}{FAD000}  % FFEE80
 \definecolor{lightyellow}{HTML}{FFEE80} 
 \definecolor{lightpurple}{HTML}{A599E9}
@@ -59,10 +59,7 @@
 \definecolor{orange}{HTML}{FF9D00}
 \colorlet{linkcolor}{lightyellow}
 
-
-\geometry{left=0.5cm,right=0.5cm,top=0.25cm,bottom=1.5cm}
-
-% Apply to document
+% Apply color selection to document
 \pagecolor{background}
 \color{textcolor}
 
@@ -76,6 +73,7 @@
 %%%%%%%%%%%%%%
 %     Make a footer
 %%%%%%%%%%%%%%
+\geometry{left=0.5cm,right=0.5cm,top=0.25cm,bottom=1.5cm}
 \usepackage{fancyhdr}
 \usepackage[absolute,overlay]{textpos}
 \pagestyle{fancy}
@@ -88,6 +86,23 @@
 	}}
 }
 %%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%
+% Make pretty in-line code
+%%%%%%%%%%%%%%%
+\usepackage{listings}
+\lstdefinestyle{inlinecode}{
+	basicstyle=\ttfamily\color{lightpurple},
+	keywordstyle=\bfseries,
+	breaklines=true,
+	keepspaces=true,
+	frame=single,
+}
+% Make an alias for in-line bash command
+\newcommand{\inlinebash}[1]{\lstinline[style=inlinecode]{#1}}
+%%%%%%%%%%%%%%%
+
 
 \parindent0pt
 \parskip2pt
