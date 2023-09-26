@@ -35,7 +35,18 @@
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
-			A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking, i.e., files that aren't new
+			A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking. i.e., Files that aren't new.
+			
+
+		\begin{center}
+		    	\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
+					\arrayrulecolor{boxcolor} % Set color of table rules
+					\rowcolor{rowcolor1} % Color of the first row
+					A & A long text that will wrap to the next line \\
+					\rowcolor{rowcolor2} % Color of the second row
+					C & D \\
+				\end{tabularx}
+		\end{center}
 			
 		\end{minipage}
 	};

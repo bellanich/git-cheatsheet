@@ -20,6 +20,7 @@
 \usepackage{amsmath,amssymb}
 
 \usepackage{colortbl}
+\usepackage{tabularx}
 \usepackage{mathtools}
 \usepackage{amsthm, amsmath, amssymb, amsfonts}
 \usepackage{enumitem}
@@ -59,7 +60,7 @@
 \definecolor{goldenyellow}{HTML}{FAD000}  % FFEE80
 \definecolor{lightyellow}{HTML}{FFEE80} 
 \definecolor{lightpurple}{HTML}{A599E9}
-\definecolor{brightpurple}{HTML}{4D21FC} %{B362FF} % 4D21FC
+\definecolor{brightpurple}{HTML}{B362FF} %{B362FF} % 4D21FC
 \definecolor{brightgreen}{HTML}{3AD900}
 \definecolor{icyblue}{HTML}{9EFFFF}
 \definecolor{deeppink}{HTML}{FF628C}
@@ -71,13 +72,16 @@
 % Apply color selection to document
 \pagecolor{background}
 \color{textcolor}
-
 \hypersetup{
 	colorlinks=true,
 	linkcolor=linkcolor,
 	urlcolor=linkcolor,
 }
-%%%%%%%%%%%%%%
+
+% Table colors setup
+\definecolor{tableoutlinecolor}{HTML}{A599E9} 
+\definecolor{rowcolor1}{HTML}{2D2B55} % Red
+\definecolor{rowcolor2}{HTML}{1E1E3F} % Green
 
 %%%%%%%%%%%%%%
 %     Make a footer
@@ -105,7 +109,7 @@
 %%%%%%%%%%%%%%%
 \usepackage{listings}
 \lstdefinestyle{inlinecode}{
-	basicstyle=\ttfamily\color{lightpurple},
+	basicstyle=\ttfamily\color{brightpurple},
 	keywordstyle=\bfseries,
 	breaklines=true,
 	keepspaces=true,
