@@ -18,14 +18,26 @@
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing}
 \usepackage{amsmath,amssymb}
-
-\usepackage{colortbl}
-\usepackage{tabularx}
 \usepackage{mathtools}
 \usepackage{amsthm, amsmath, amssymb, amsfonts}
 \usepackage{enumitem}
 \usepackage{fontawesome}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%
+% Table formatting
+%%%%%%%%%%%%%%
+% To make a pretty table
+% Table colors setup
+\definecolor{tableoutlinecolor}{HTML}{A599E9} 
+\definecolor{rowcolor1}{HTML}{2D2B55} % Red
+\definecolor{rowcolor2}{HTML}{1E1E3F} % Green
+
+\usepackage{colortbl}
+%\rowcolors{1}{rowcolor1}{rowcolor2}
+\usepackage{tabularx}
+%%%%%%%%%%%%%%
 
 %\title{Git Cheat Sheet}
 \usepackage[english]{babel}
@@ -51,7 +63,6 @@
 %%%%%%%%%%%%%%
 % Shades of purple colors
 %%%%%%%%%%%%%%
-\usepackage{xcolor}
 
 % Define colors
 \definecolor{background}{HTML}{2D2B55}
@@ -77,11 +88,6 @@
 	linkcolor=linkcolor,
 	urlcolor=linkcolor,
 }
-
-% Table colors setup
-\definecolor{tableoutlinecolor}{HTML}{A599E9} 
-\definecolor{rowcolor1}{HTML}{2D2B55} % Red
-\definecolor{rowcolor2}{HTML}{1E1E3F} % Green
 
 %%%%%%%%%%%%%%
 %     Make a footer

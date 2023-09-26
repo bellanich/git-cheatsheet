@@ -2,6 +2,9 @@
 
 \colorlet{outlinecolor}{orange}
 
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!90}
+\colorlet{rowcolor2}{outlinecolor!70}
 
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
@@ -39,13 +42,24 @@
 			
 
 		\begin{center}
-		    	\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
+			\textcolor{background}{
+				    \begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
 					\arrayrulecolor{boxcolor} % Set color of table rules
-					\rowcolor{rowcolor1} % Color of the first row
+					\rowcolor{headercolor} % Color of the header row
+					\textbf{Column A} & \textbf{Column B} \\ % Bold and center the header text
+					\hline % Add a horizontal line below the header row
 					A & A long text that will wrap to the next line \\
 					\rowcolor{rowcolor2} % Color of the second row
 					C & D \\
 				\end{tabularx}
+%		    	\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
+%					\arrayrulecolor{boxcolor} % Set color of table rules
+%					\rowcolor{rowcolor1} % Color of the first row
+%					A & A long text that will wrap to the next line \\
+%					\rowcolor{rowcolor2} % Color of the second row
+%					C & D \\
+%				\end{tabularx}
+			}
 		\end{center}
 			
 		\end{minipage}
