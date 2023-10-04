@@ -73,12 +73,14 @@
 \definecolor{lightyellow}{HTML}{FFEE80} 
 \definecolor{lightpurple}{HTML}{A599E9}
 \definecolor{brightpurple}{HTML}{B362FF} %{B362FF} % 4D21FC
-\definecolor{brightgreen}{HTML}{3AD900}
+\definecolor{brightgreen}{HTML}{3AD900} %A5FF90,  3AD900
+\colorlet{green}{brightgreen!65}
 \definecolor{icyblue}{HTML}{9EFFFF}
 \definecolor{deeppink}{HTML}{FF628C}
 \definecolor{icypink}{HTML}{FB94FF}
 \definecolor{paleyellow}{HTML}{FAEFA5}
 \definecolor{orange}{HTML}{FF9D00}
+\definecolor{red}{HTML}{EC3A37}
 \colorlet{linkcolor}{lightyellow}
 
 % Apply color selection to document
@@ -115,6 +117,7 @@
 % Make pretty in-line code
 %%%%%%%%%%%%%%%
 \usepackage{listings}
+\usepackage[T1]{fontenc}
 % Define bash command styling for using in textbox
 \lstdefinestyle{inlinecode}{
 	basicstyle=\ttfamily\color{brightpurple},
@@ -132,6 +135,9 @@
 	breaklines=true,
 	keepspaces=true,
 	frame=single,
+	literate=%
+	{"}{\textquotedbl}1
+	{'}{\textquotesingle}1
 }
 \newcommand{\tablebash}[1]{{\lstinline[style=tablebash]{#1}}}
 %%%%%%%%%%%%%%%
@@ -169,6 +175,8 @@
 \input{history_of_git.tex}
 \vspace{-2mm}
 \input{git_theory.tex}
+\vspace{-2mm}
+\input{quick_start.tex}
 
 \end{multicols*}
 %%%%%%%%%%%%%%%
