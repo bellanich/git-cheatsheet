@@ -1,0 +1,51 @@
+\colorlet{outlinecolor}{icyblue}
+
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			
+			\underline{Introduction}: The \textcolor{outlinecolor}{Git stash} command allows you to temporarily save and store changes in your working directory that are not ready to be committed. It stores these changes as a \textcolor{outlinecolor}{stack data structure}. 
+			\begin{itemize}
+				\item \textit{When to use?} Whenever you want to save but not commit incomplete work. e.g., switching branches or addressing urgent tasks
+			\end{itemize}
+			
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{git stash} & Stash all tracked changes \\
+						\rowcolor{rowcolor2} % New Row
+						\tablebash{git stash -u} & Include untracked changes in your stash \\
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git stash list} & Get the list of all stashed changes in your repo \\
+						\rowcolor{rowcolor2} % New Row
+						\tablebash{git stash show stash\{\@1\}} & Shows aggregate file changes for 1st index in Git stash stack \\
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git stash drop} & Manually remove most recent stash \\
+						\tablebash{git stash clear} & Deletes all stashes \\
+					\end{tabularx}
+				}
+			\end{center}
+			
+			%			\begin{minipage}{\textwidth}
+				%				\centering
+				%%				\vspace{-2mm}
+				%				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
+				%				\vspace{-2mm}
+				%				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
+				%			\end{minipage}
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Stashing};
+\end{tikzpicture}
