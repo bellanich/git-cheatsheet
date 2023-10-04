@@ -66,6 +66,7 @@
 
 % Define colors
 \definecolor{background}{HTML}{2D2B55}
+\definecolor{darkbackground}{HTML}{1E1E3F}
 \colorlet{boxcolor}{background!90}
 \definecolor{textcolor}{HTML}{FFFFFF} %{FFFFFF}  %{B362FF}
 \definecolor{goldenyellow}{HTML}{FAD000}  % FFEE80
@@ -114,6 +115,7 @@
 % Make pretty in-line code
 %%%%%%%%%%%%%%%
 \usepackage{listings}
+% Define bash command styling for using in textbox
 \lstdefinestyle{inlinecode}{
 	basicstyle=\ttfamily\color{brightpurple},
 	keywordstyle=\bfseries,
@@ -121,8 +123,17 @@
 	keepspaces=true,
 	frame=single,
 }
-% Make an alias for in-line bash command
 \newcommand{\inlinebash}[1]{\lstinline[style=inlinecode]{#1}}
+
+% Define bash command styling for using in table
+\lstdefinestyle{tablebash}{
+	basicstyle=\ttfamily\color{darkbackground},
+	keywordstyle=\bfseries,
+	breaklines=true,
+	keepspaces=true,
+	frame=single,
+}
+\newcommand{\tablebash}[1]{{\lstinline[style=tablebash]{#1}}}
 %%%%%%%%%%%%%%%
 
 
@@ -157,7 +168,7 @@
 
 \input{history_of_git.tex}
 \vspace{-2mm}
-\input{git_basics.tex}
+\input{git_theory.tex}
 
 \end{multicols*}
 %%%%%%%%%%%%%%%

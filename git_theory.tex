@@ -3,8 +3,8 @@
 \colorlet{outlinecolor}{orange}
 
 \colorlet{headercolor}{outlinecolor}
-\colorlet{rowcolor1}{outlinecolor!90}
-\colorlet{rowcolor2}{outlinecolor!70}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
 
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
@@ -32,37 +32,42 @@
 		\vspace{-3mm}
 		\end{minipage}
 	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Theory};
 \end{tikzpicture}
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
-			A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking. i.e., Files that aren't new.
+			\underline{Tracking}: A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking. In other words, any files that aren't new.
 			
 
 		\begin{center}
 			\textcolor{background}{
 				    \begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
-					\arrayrulecolor{boxcolor} % Set color of table rules
-					\rowcolor{headercolor} % Color of the header row
-					\textbf{Column A} & \textbf{Column B} \\ % Bold and center the header text
+					\arrayrulecolor{boxcolor} % Table line color
+					\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 					\hline % Add a horizontal line below the header row
-					A & A long text that will wrap to the next line \\
+					\rowcolor{rowcolor1} \tablebash{git ls-files} & Returns the list of files tracked by Git \\
 					\rowcolor{rowcolor2} % Color of the second row
-					C & D \\
+					\tablebash{git commit -am "commit message"} & Simultaneously add and commit a tracked file \\
+					\rowcolor{rowcolor1} \tablebash{git add .} & Recursively add untracked files from current filepath location \\
 				\end{tabularx}
-%		    	\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
-%					\arrayrulecolor{boxcolor} % Set color of table rules
-%					\rowcolor{rowcolor1} % Color of the first row
-%					A & A long text that will wrap to the next line \\
-%					\rowcolor{rowcolor2} % Color of the second row
-%					C & D \\
-%				\end{tabularx}
 			}
 		\end{center}
+		
+		
+%		\begin{center}
+%			\textcolor{background}{
+%				\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5.5cm}}
+%					\arrayrulecolor{boxcolor}
+%					\rowcolor{headercolor}
+%					
+%					\hline
+%					\rowcolor{rowcolor1} \tablebash{hi} & \multic
+%					
 			
 		\end{minipage}
 	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Basics (2)};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Theory (2)};
 \end{tikzpicture}
