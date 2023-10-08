@@ -10,15 +10,29 @@
 			\vspace{0.1cm}
 			
 			\underline{Introduction}: It's a best practice to create all your changes on \textcolor{outlinecolor}{feature (or topic) branches}, make sure these changes stable, and then merge into the \inlinebash{main} branch.
-		
 			
-			%			\begin{minipage}{\textwidth}
-				%				\centering
-				%%				\vspace{-2mm}
-				%				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
-				%				\vspace{-2mm}
-				%				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
-				%			\end{minipage}
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{3.5cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git branch} & Lists all current \textbf{local} branches \\
+						\rowcolor{rowcolor2} 
+						\tablebash{git branch --all} & Lists all current local and remote branches \\
+						\rowcolor{rowcolor1} 
+						\tablebash{git branch -m old\_branch\_name new\_branch\_name} & Rename your Git branch \\
+						\rowcolor{rowcolor2} 
+						\tablebash{git branch --delete branch\_name} & Deletes a \textbf{local} branch\\
+					\end{tabularx}
+				}
+			\end{center}
+			\vspace{-1mm}
+			
+			\underline{Merging}: Define merging and state the main types of merges.
 			
 		\end{minipage}
 	};
