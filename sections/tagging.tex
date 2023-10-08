@@ -50,7 +50,7 @@
 				\end{center}
 
 			
-				\underline{Syncing tags}: Here's how to sync your local Git tags with remote.
+				\underline{Syncing tags}: When you \textcolor{outlinecolor}{push a tag} to your remote repository, you \textcolor{outlinecolor}{also push its associated commit}.
 				\vspace{-2mm}
 				\begin{center}
 					\textcolor{background}{
@@ -60,9 +60,11 @@
 							\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 							\hline % Add a horizontal line below the header row
 							\rowcolor{rowcolor1} % New Row
-							\tablebash{git tag tag\_name} & Create a local \textbf{lightweight tag} for most recent commit \\
+							\tablebash{git push origin tag\_name} & Push a specific Git tag to remote \\
 							\rowcolor{rowcolor2} 
-							\tablebash{git tag tag\_name "your tag message"} & Create a local  \textbf{annotated tag} for most recent commit \\
+							\tablebash{git push origin remote\_branch\_name --tags} & Push all Git tags to a specific remote branch \\
+							\rowcolor{rowcolor1} % New Row
+							\tablebash{git push origin :tag\_name} & Delete a tag that you've accidentally pushed to remote \\
 						\end{tabularx}
 					}
 				\end{center}
