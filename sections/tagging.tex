@@ -68,6 +68,12 @@
 						\end{tabularx}
 					}
 				\end{center}
+				
+				\underline{Undoing tags}: Let’s suppose that you put your git tag on the wrong commit. There are 2 ways to fix it:
+				\begin{enumerate}
+					\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
+%					\item \textcolor{outlinecolor}{Force a git tag change} by using the command \inlinebash{git tag -a tag\_name -f commit\_hash}. This forces the git tag to move from its current commit to a new one.
+				\end{enumerate}
 			
 		\end{minipage}
 	};
@@ -80,10 +86,10 @@
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
 			
-			\underline{Undoing tags}: Let’s suppose that you put your git tag on the wrong commit. There are 2 ways to fix it:
+		    The 2 ways to move your Git tag to the correct commit: (continued)
 			\begin{enumerate}
-				\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
-				\item \textcolor{outlinecolor}{Force a git tag change} by using the command \inlinebash{git tag -a tag\_name -f commit\_hash}. This forces the git tag to move from its current commit to a new one.
+%				\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
+				\item[2.] \textcolor{outlinecolor}{Force a git tag change} by using the command \inlinebash{git tag -a tag\_name -f commit\_hash}. This forces the git tag to move from its current commit to a new one.
 			\end{enumerate}
 		
 			

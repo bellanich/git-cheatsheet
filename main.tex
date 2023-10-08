@@ -67,12 +67,12 @@
 % Define colors
 \definecolor{background}{HTML}{2D2B55}
 \definecolor{darkbackground}{HTML}{1E1E3F}
-\colorlet{boxcolor}{background!90}
+\colorlet{boxcolor}{background!95}
 \definecolor{textcolor}{HTML}{FFFFFF} %{FFFFFF}  %{B362FF}
 \definecolor{goldenyellow}{HTML}{FAD000}  % FFEE80
 \definecolor{lightyellow}{HTML}{FFEE80} 
 \definecolor{lightpurple}{HTML}{A599E9}
-\definecolor{brightpurple}{HTML}{B362FF} %{B362FF} % 4D21FC
+\definecolor{brightpurple}{HTML}{B362FF} %{B362FF} % 4D21FC, ab53fc
 \definecolor{brightgreen}{HTML}{3AD900} %A5FF90,  3AD900
 \colorlet{green}{brightgreen!65} % A5FF90
 \definecolor{icyblue}{HTML}{9EFFFF}
@@ -120,7 +120,7 @@
 \usepackage[T1]{fontenc}
 % Define bash command styling for using in textbox
 \lstdefinestyle{inlinecode}{
-	basicstyle=\ttfamily\color{brightpurple},
+	basicstyle=\ttfamily\color{lightpurple},
 	keywordstyle=\bfseries,
 	breaklines=true,
 	keepspaces=true,
@@ -186,6 +186,8 @@
 \input{sections/stashing.tex}
 \vspace{-2mm}
 \input{sections/tagging.tex}
+\vspace{-2mm}
+\input{sections/branches.tex}
 
 \end{multicols*}
 %%%%%%%%%%%%%%%
