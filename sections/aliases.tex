@@ -1,0 +1,46 @@
+
+
+\colorlet{outlinecolor}{deeppink}
+
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+		\vspace{0.1cm}
+		
+			\underline{Introduction}: Rather than adding Git aliases to a \textcolor{lightpurple}{$\sim$}\inlinebash{/.bashrc} or \textcolor{lightpurple}{$\sim$}\inlinebash{/.zshrc} file, you can declare them directly in Git.
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4.5cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{git config --global alias.alias\_name "your git command"} & Creates a new Git alias. Do \textbf{not} include \tablebash{git} in double quotations, since Git automatically adds this. \\
+						\rowcolor{rowcolor2} % Color of the second row
+						\tablebash{git config --global --unset  alias.alias\_name} & Globally delete your Git alias \\
+					\end{tabularx}
+				}
+			\end{center}
+%			\begin{itemize}
+%				\item \textit{How?} Use the command \inlinebash{git config --global alias.alias\_name "your git command"}.
+%				\item \textit{Note.} Do \textbf{not} start your command with `\inlinebash{git}'. Git will automatically add it to your inputted alias. 
+%			\end{itemize} 
+			Your alias definition will be saved in your machine's \textcolor{lightpurple}{$\sim$}\inlinebash{/.gitconfig} file. You can also edit or delete your aliases from here. \\
+			
+			\underline{Favorite aliases}: Here are my favorite aliases.
+			\begin{itemize}
+				\item \textit{Commit history display}. \inlinebash{git config --global alias.history2 "log --graph --abbrev-commit --decorate --format=format:'\%C(bold blue)\%h\%C(reset) - \%C(bold cyan)\%aD\%C(reset) \%C(bold green)(\%ar)\%C(reset) \%C(bold cyan)(committed: \%cD)\%C(reset) \%C(auto)\%d\%C(reset)\%n''          \%C(white)\%s\%C(reset)\%n''          \%C(dim white)- \%an <\%ae> \%C(reset) \%C(dim white)(committer: \%cn <\%ce>)\%C(reset)'"}
+			\end{itemize}
+			
+			% my alias: 
+		
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Aliases};
+\end{tikzpicture}

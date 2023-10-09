@@ -114,15 +114,17 @@
 %%%%%%%%%%%%%%%
 \usepackage{listings}
 \usepackage[T1]{fontenc}
+\colorlet{inline-code-color}{lightpurple}
 % Define bash command styling for using in textbox
 \lstdefinestyle{inlinecode}{
-	basicstyle=\ttfamily\color{lightpurple},
+	basicstyle=\ttfamily\color{inline-code-color},
 	keywordstyle=\bfseries,
 	breaklines=true,
 	keepspaces=true,
 	frame=single,
 }
 \newcommand{\inlinebash}[1]{\lstinline[style=inlinecode]{#1}}
+
 
 % Define bash command styling for using in table
 \lstdefinestyle{tablebash}{
@@ -184,6 +186,8 @@
 \input{sections/tagging.tex}
 \vspace{-2mm}
 \input{sections/branches.tex}
+\vspace{-2mm}
+\input{sections/aliases.tex}
 
 \end{multicols*}
 %%%%%%%%%%%%%%%
