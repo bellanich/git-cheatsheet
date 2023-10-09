@@ -28,14 +28,8 @@
 %%%%%%%%%%%%%%
 % Table formatting
 %%%%%%%%%%%%%%
-% To make a pretty table
-% Table colors setup
-\definecolor{tableoutlinecolor}{HTML}{A599E9} 
-\definecolor{rowcolor1}{HTML}{2D2B55} % Red
-\definecolor{rowcolor2}{HTML}{1E1E3F} % Green
-
+\definecolor{tableoutlinecolor}{HTML}{A599E9}
 \usepackage{colortbl}
-%\rowcolors{1}{rowcolor1}{rowcolor2}
 \usepackage{tabularx}
 %%%%%%%%%%%%%%
 
@@ -50,6 +44,8 @@
 \captionsetup{
 	font=tiny,
 }
+\usepackage{subcaption}
+
 
 
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
