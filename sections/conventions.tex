@@ -1,0 +1,78 @@
+
+
+\colorlet{outlinecolor}{deeppink}
+
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+		\vspace{0.1cm}
+		
+			\underline{Repository name conventions}:
+			\begin{itemize}
+				\item \textit{Project names} are expected to be \textbf{(a)} a short and descriptive name, \textbf{(b)} in all lowercase letters, and \textbf{(c)} only use dashes as separators.
+				\item \textit{Remote repository} is referred to as \inlinebash{origin} in Git.
+			\end{itemize}
+			\vspace{2mm}
+			
+			\underline{Commits}: There are some shorthands to refer to the most recently made commits.
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{HEAD} & Shorthand in Git for the last commit \\
+						\rowcolor{rowcolor2} % Color of the second row
+						\tablebash{HEAD\^} & Shorthand in Git for the second to last commit  \\
+					\end{tabularx}
+				}
+			\end{center}
+			
+			\underline{Default branch name}: The Git community is slowly migrating away from the default branch name being \inlinebash{master} and towards it being \inlinebash{main}.
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{git branch -m main} & Change the default branch name from \tablebash{master} $\rightarrow$ \tablebash{main} for a \textbf{specific repo} \\
+						\rowcolor{rowcolor2} % Color of the second row
+						\tablebash{git config --global init.defaultBranch main} & Change the default branch across \textbf{all repositories}  \\
+					\end{tabularx}
+				}
+			\end{center}
+			
+			\vspace{-1mm}
+			\underline{Naming new branches}: One convention for branch naming is to have a prefix that states the branch's general purpose. i.e., 
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5.45cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Branch Type}} & \multicolumn{1}{c}{\centering \textbf{Convention}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{feature} & Branch name is either \tablebash{feat/my-description} or \tablebash{feature/my-description} \\
+						\rowcolor{rowcolor2} % Color of the second row
+						\tablebash{bugfix} & Branch name is either \tablebash{fix/my-description} or \tablebash{bugfix/my-description}  \\
+						\rowcolor{rowcolor1} 
+						\tablebash{release} & Branch name is \tablebash{release/version-number} \\
+						\rowcolor{rowcolor2}
+						\tablebash{hotfix} & Branch name is \tablebash{hotfix/my-description} \\
+					\end{tabularx}
+				}
+			\end{center}
+
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Conventions};
+\end{tikzpicture}
