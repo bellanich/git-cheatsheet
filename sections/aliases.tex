@@ -30,14 +30,23 @@
 %				\item \textit{How?} Use the command \inlinebash{git config --global alias.alias\_name "your git command"}.
 %				\item \textit{Note.} Do \textbf{not} start your command with `\inlinebash{git}'. Git will automatically add it to your inputted alias. 
 %			\end{itemize} 
-			Your alias definition will be saved in your machine's \textcolor{lightpurple}{$\sim$}\inlinebash{/.gitconfig} file. You can also edit or delete your aliases from here. \\
+			Your alias definition will be saved in your machine's \textcolor{lightpurple}{$\sim$}\inlinebash{/.gitconfig} file. You can also edit or delete your aliases from here. 
+			\vspace{2mm}
 			
-			\underline{Favorite aliases}: Here are my favorite aliases.
-			\begin{itemize}
-				\item \textit{Commit history display}. \inlinebash{git config --global alias.history2 "log --graph --abbrev-commit --decorate --format=format:'\%C(bold blue)\%h\%C(reset) - \%C(bold cyan)\%aD\%C(reset) \%C(bold green)(\%ar)\%C(reset) \%C(bold cyan)(committed: \%cD)\%C(reset) \%C(auto)\%d\%C(reset)\%n''          \%C(white)\%s\%C(reset)\%n''          \%C(dim white)- \%an <\%ae> \%C(reset) \%C(dim white)(committer: \%cn <\%ce>)\%C(reset)'"}
-			\end{itemize}
-			
-			% my alias: 
+			\underline{Favorite aliases}: 
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{6cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Alias}} & \multicolumn{1}{c}{\centering \textbf{Definition}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} \tablebash{git history} & \tiny{\tablebash{git config --global alias.history "log --graph --abbrev-commit --decorate --format=format:'\%C(bold blue)\%h\%C(reset) - \%C(bold cyan)\%aD\%C(reset) \%C(bold green)(\%ar)\%C(reset) \%C(bold cyan)(committed: \%cD)\%C(reset) \%C(auto)\%d\%C(reset)\%n''          \%C(white)\%s\%C(reset)\%n''          \%C(dim white)- \%an <\%ae> \%C(reset) \%C(dim white)(committer: \%cn <\%ce>)\%C(reset)'"}} \\
+					\end{tabularx}
+				}
+			\end{center}
+		
 		
 			
 		\end{minipage}
