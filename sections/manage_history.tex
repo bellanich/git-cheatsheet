@@ -21,14 +21,28 @@
 									\rowcolor{headercolor} % Header row color
 									\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 									\hline % Add a horizontal line below the header row
-									\rowcolor{rowcolor1} \tablebash{git reset HEAD your\_filename} & Undoes an unwanted \tablebash{git add} \\
-									\rowcolor{rowcolor2} % Color of the second row
+									\rowcolor{rowcolor1} \tablebash{git reset HEAD your\_filename} & Undoes an unwanted \tablebash{git add}. \\
+									\rowcolor{rowcolor2} 
+									\tablebash{git reflog} & View records of time travel, i.e. \tablebash{HEAD} resets \\
+									\rowcolor{rowcolor1} % Color of the second row
 									\tablebash{git checkout -- your\_filename} & Reverts a file to its last commit version \\
-									\rowcolor{rowcolor1} % New Row
+									\rowcolor{rowcolor2} % New Row
 									\tablebash{git commit --amend -m "new commit message"} & Update your Git commit message \\
 								\end{tabularx}
 						}
-				\end{center}		
+				\end{center}
+				\vspace{-2mm}
+				
+				\textit{Note.} The \inlinebash{git reflog} holds records for the last 60 days. After that, it autopurges. 
+				
+				\vspace{2mm}
+				
+				\underline{Resets}: There are 3 different types of resets in Git.
+				\begin{enumerate}
+					\item \textcolor{outlinecolor}{Soft Reset.} Moves the \inlinebash{HEAD} and branch pointer to a different commit, but \textcolor{outlinecolor}{leaves changes in the staging area}. Undoes a \inlinebash{git commit} while keeping changes made.
+					\item \textcolor{outlinecolor}{Mixed Reset.} Moves the \inlinebash{HEAD} and branch pointer to a different commit and \textcolor{outlinecolor}{clears the staging area}. Default in Git.
+					\item \textcolor{outlinecolor}{Hard Reset.} Same as a mixed reset, except it \textcolor{outlinecolor}{also discards all changes in the working dir}. Hence, a destructive operation.
+				\end{enumerate}
 				
 		\end{minipage}
 	};
@@ -62,14 +76,6 @@
 					\end{tabularx}
 				}
 			\end{center}
-			
-			%			\begin{minipage}{\textwidth}
-				%				\centering
-				%%				\vspace{-2mm}
-				%				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
-				%				\vspace{-2mm}
-				%				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
-				%			\end{minipage}
 			
 		\end{minipage}
 	};
