@@ -51,6 +51,32 @@
 						\tablebash{git stash apply} & Applies most recent stash to working directory \textbf{without deleting it} from stash stack \\
 						\rowcolor{rowcolor2} 
 						\tablebash{git stash drop} & Manually delete most recent stash from stack\\
+					\end{tabularx}
+				}
+			\end{center}
+			\vspace{-4mm}
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Stashing};
+\end{tikzpicture}
+
+\vspace{2mm}
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			
+			Commands to move stashes: (continued)
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
 						\rowcolor{rowcolor1} % New Row
 						\tablebash{git stash pop} & Shorthand combination of \tablebash{git stash apply} and \tablebash{git stash drop} \\
 						\rowcolor{rowcolor2}
@@ -62,40 +88,14 @@
 					\end{tabularx}
 				}
 			\end{center}
-			\vspace{-1.5mm}
+			\vspace{-1mm}
 			
 			\underline{Stash into another branch}: You can use git stash to move changes from one branch into another one. Here are the 2 steps: 
 			\begin{enumerate}
 				\item Stash the changes that you want move
-%				\item Use the command \inlinebash{git stash branch new\_branch\_name} to automatically create a new branch, where your stash is applied. Your stash will also be removed from the stack.
-			\end{enumerate}
-			\vspace{-2mm}
-			
-		\end{minipage}
-	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Stashing};
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
-		\begin{minipage}{0.3\textwidth}
-			\vspace{0.1cm}
-			
-			How to stash into another branch: (continued)
-				\begin{enumerate}
-%						\item Stash the changes that you want move
 						\item[2.] Use the command \inlinebash{git stash branch new\_branch\_name} to automatically create a new branch, where your stash is applied. Your stash will also be removed from the stack.
 				\end{enumerate}
 			
-			
-			%			\begin{minipage}{\textwidth}
-				%				\centering
-				%%				\vspace{-2mm}
-				%				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
-				%				\vspace{-2mm}
-				%				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
-				%			\end{minipage}
 			
 		\end{minipage}
 	};

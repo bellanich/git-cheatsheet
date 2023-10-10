@@ -48,33 +48,11 @@
 						\end{tabularx}
 					}
 				\end{center}
+				\vspace{-2mm}
 
 			
-				\underline{Syncing tags}: When you \textcolor{outlinecolor}{push a tag} to your remote repository, you \textcolor{outlinecolor}{also push its associated commit}.
-				\vspace{-2mm}
-				\begin{center}
-					\textcolor{background}{
-						\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
-							\arrayrulecolor{boxcolor} % Table line color
-							\rowcolor{headercolor} % Header row color
-							\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
-							\hline % Add a horizontal line below the header row
-							\rowcolor{rowcolor1} % New Row
-							\tablebash{git push origin tag\_name} & Push a specific Git tag to remote \\
-							\rowcolor{rowcolor2} 
-							\tablebash{git push origin remote\_branch\_name --tags} & Push all Git tags to a specific remote branch \\
-							\rowcolor{rowcolor1} % New Row
-							\tablebash{git push origin :tag\_name} & Delete a tag that you've accidentally pushed to remote \\
-						\end{tabularx}
-					}
-				\end{center}
-				
-				\underline{Undoing tags}: Let’s suppose that you put your git tag on the wrong commit. There are 2 ways to fix it:
-				\begin{enumerate}
-					\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
-%					\item \textcolor{outlinecolor}{Force a git tag change} by using the command \inlinebash{git tag -a tag\_name -f commit\_hash}. This forces the git tag to move from its current commit to a new one.
-				\end{enumerate}
-			
+			\underline{Syncing tags}: When you \textcolor{outlinecolor}{push a tag} to your remote repository, you \textcolor{outlinecolor}{also push its associated commit}.
+			\vspace{-2mm}
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Tagging};
@@ -86,8 +64,28 @@
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
 			
-		    The 2 ways to move your Git tag to the correct commit: (continued)
-			\begin{enumerate}
+			Commands to sync your Git tags:
+			\vspace{-2mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git push origin tag\_name} & Push a specific Git tag to remote \\
+						\rowcolor{rowcolor2} 
+						\tablebash{git push origin remote\_branch\_name --tags} & Push all Git tags to a specific remote branch \\
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git push origin :tag\_name} & Delete a tag that you've accidentally pushed to remote \\
+					\end{tabularx}
+				}
+			\end{center}
+			
+		    \underline{Undoing tags}: Let’s suppose that you put your git tag on the wrong commit. There are 2 ways to fix it:
+		    \begin{enumerate}
+		    	\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
 %				\item \textcolor{outlinecolor}{Delete and recreate} your Git tag on the correct commit.
 				\item[2.] \textcolor{outlinecolor}{Force a git tag change} by using the command \inlinebash{git tag -a tag\_name -f commit\_hash}. This forces the git tag to move from its current commit to a new one.
 			\end{enumerate}

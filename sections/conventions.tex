@@ -52,29 +52,61 @@
 				}
 			\end{center}
 			
-			\vspace{-1mm}
-			\underline{Naming new branches}:\href{https://dev.to/couchcamote/git-branching-name-convention-cch}{One convention for branch naming} is to have a prefix that states the branch's general purpose. i.e., 
-			\vspace{-2mm}
-			\begin{center}
-				\textcolor{background}{
-					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5.45cm}}
-						\arrayrulecolor{boxcolor} % Table line color
-						\rowcolor{headercolor} % Header row color
-						\multicolumn{1}{c|}{\centering \textbf{Branch Type}} & \multicolumn{1}{c}{\centering \textbf{Convention}} \\ % Center the header text
-						\hline % Add a horizontal line below the header row
-						\rowcolor{rowcolor1} \tablebash{feature} & Branch name is either \tablebash{feat/my-description} or \tablebash{feature/my-description} \\
-						\rowcolor{rowcolor2} % Color of the second row
-						\tablebash{bugfix} & Branch name is either \tablebash{fix/my-description} or \tablebash{bugfix/my-description}  \\
-						\rowcolor{rowcolor1} 
-						\tablebash{release} & Branch name is \tablebash{release/version-number} \\
-						\rowcolor{rowcolor2}
-						\tablebash{hotfix} & Branch name is \tablebash{hotfix/my-description} \\
-					\end{tabularx}
-				}
-			\end{center}
+			\vspace{-5mm}
+%			\underline{Naming new branches}: \href{https://dev.to/couchcamote/git-branching-name-convention-cch}{One convention for branch naming} is to have a prefix that states the branch's general purpose. i.e., 
+%			\vspace{-2mm}
+%			\begin{center}
+%				\textcolor{background}{
+%					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5.45cm}}
+%						\arrayrulecolor{boxcolor} % Table line color
+%						\rowcolor{headercolor} % Header row color
+%						\multicolumn{1}{c|}{\centering \textbf{Branch Type}} & \multicolumn{1}{c}{\centering \textbf{Convention}} \\ % Center the header text
+%						\hline % Add a horizontal line below the header row
+%						\rowcolor{rowcolor1} \tablebash{feature} & Branch name is either \tablebash{feat/my-description} or \tablebash{feature/my-description} \\
+%						\rowcolor{rowcolor2} % Color of the second row
+%						\tablebash{bugfix} & Branch name is either \tablebash{fix/my-description} or \tablebash{bugfix/my-description}  \\
+%						\rowcolor{rowcolor1} 
+%						\tablebash{release} & Branch name is \tablebash{release/version-number} \\
+%						\rowcolor{rowcolor2}
+%						\tablebash{hotfix} & Branch name is \tablebash{hotfix/my-description} \\
+%					\end{tabularx}
+%				}
+%			\end{center}
+%			\vspace{-3mm}
 
 			
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Conventions};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			
+			\underline{Naming new branches}: \href{https://dev.to/couchcamote/git-branching-name-convention-cch}{One convention for branch naming} is to have a prefix that states the branch's general purpose. i.e., 
+			\vspace{-2mm}
+			\begin{center}
+					\textcolor{background}{
+							\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{5.45cm}}
+									\arrayrulecolor{boxcolor} % Table line color
+									\rowcolor{headercolor} % Header row color
+									\multicolumn{1}{c|}{\centering \textbf{Branch Type}} & \multicolumn{1}{c}{\centering \textbf{Convention}} \\ % Center the header text
+									\hline % Add a horizontal line below the header row
+									\rowcolor{rowcolor1} \tablebash{feature} & Branch name is either \tablebash{feat/my-description} or \tablebash{feature/my-description} \\
+									\rowcolor{rowcolor2} % Color of the second row
+									\tablebash{bugfix} & Branch name is either \tablebash{fix/my-description} or \tablebash{bugfix/my-description}  \\
+									\rowcolor{rowcolor1} 
+									\tablebash{release} & Branch name is \tablebash{release/version-number} \\
+									\rowcolor{rowcolor2}
+									\tablebash{hotfix} & Branch name is \tablebash{hotfix/my-description} \\
+								\end{tabularx}
+						}
+				\end{center}
+			\vspace{-3mm}
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Conventions (2)};
 \end{tikzpicture}

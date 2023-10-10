@@ -31,53 +31,22 @@
 								\end{tabularx}
 						}
 				\end{center}
-				\vspace{-2mm}
-				
-				\textit{Note.} The \inlinebash{git reflog} holds records for the last 60 days. After that, it autopurges. 
-				
-				\vspace{2mm}
-				
-				\underline{Resets}: There are 3 different types of resets in Git.
-				\begin{enumerate}
+			
+			\textit{Note.} The \inlinebash{git reflog} holds records for the last 60 days. After that, it autopurges. 
+
+			\vspace{2mm}
+			
+			\underline{Resets}: There are 3 different types of resets in Git.
+			\begin{enumerate}
 					\item \textcolor{outlinecolor}{Soft Reset.} Moves the \inlinebash{HEAD} and branch pointer to a different commit, but \textcolor{outlinecolor}{leaves changes in the staging area}. Undoes a \inlinebash{git commit} while keeping changes made.
 					\item \textcolor{outlinecolor}{Mixed Reset.} Moves the \inlinebash{HEAD} and branch pointer to a different commit and \textcolor{outlinecolor}{clears the staging area}. Default in Git.
 					\item \textcolor{outlinecolor}{Hard Reset.} Same as a mixed reset, except it \textcolor{outlinecolor}{also discards all changes in the working dir}. Hence, a destructive operation.
-				\end{enumerate}
-				
+			\end{enumerate}
+			\vspace{-3mm}
+			
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Undo Unwanted Changes};
 \end{tikzpicture}
 
 
-
-\begin{tikzpicture}
-	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
-		\begin{minipage}{0.3\textwidth}
-			\vspace{0.1cm}
-			
-			\underline{Repo restructuring}: Here's how to get Git to track your repo structuring.
-			
-			\vspace{-2mm}
-			\begin{center}
-				\textcolor{background}{
-					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
-						\arrayrulecolor{boxcolor} % Table line color
-						\rowcolor{headercolor} % Header row color
-						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
-						\hline % Add a horizontal line below the header row
-						\rowcolor{rowcolor1} \tablebash{git mv current\_filepath new\_filepath} & Rename your file and get Git to track it in one-go \\
-						\rowcolor{rowcolor2} % New Row
-						\tablebash{git rm your\_filename} & Simultaneously delete and stop tracking a file in one-go \\
-						\rowcolor{rowcolor1} % Color of the second row
-						\tablebash{git add -A} & Stages any file renaming or deletions done via your IDE \\
-						\rowcolor{rowcolor2} % Color of the second row
-						\tablebash{git checkout -- deleted\_filename} & Undo tracked file deletion \\
-					\end{tabularx}
-				}
-			\end{center}
-			
-		\end{minipage}
-	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Track Wanted Changes};
-\end{tikzpicture}

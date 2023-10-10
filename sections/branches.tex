@@ -76,16 +76,6 @@
 			\end{minipage}
 			% End figure
 			
-			\vspace{2mm}
-			
-			Either way, you can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This ensures that your commit history size remains manageable. Of course, \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations. \\
-			
-		
-			\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
-			\begin{itemize}
-				\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and master branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
-			\end{itemize}
-			
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches};
@@ -97,6 +87,15 @@
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
+			
+						
+				Either way, you can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This ensures that your commit history size remains manageable. Of course, \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations. \\
+			
+			
+				\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
+				\begin{itemize}
+						\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and master branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
+				\end{itemize}
 			
 			\begin{itemize}
 				\item \textit{Pull with a rebase.} You can pull changes from \inlinebash{main} into your feature branch as a rebase. This keeps your Git history flat. Use \inlinebash{git pull --rebase origin master}.
@@ -160,16 +159,46 @@
 					\multicolumn{1}{c|}{\centering \textbf{Category}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 					\hline % Add a horizontal line below the header row
 					\rowcolor{rowcolor1} % New Row
-					Ship &  Make a change \textbf{directly} into your mainline. Great for updated docs, unremarkable bug fixes; etc. \\
+					Ship &  Make a change \textbf{directly} into your mainline. Great for updated docs, simple bug fixes; etc. \\
 					\rowcolor{rowcolor2} 
-					\tablebash{Show} & Open a Pull Request with your change but merge without waiting for anyone. \\
-					\rowcolor{rowcolor1} 
-					\tablebash{Ask} & Open a Pull Request and wait for approval before merging  \\
 				\end{tabularx}
 			}
 		\end{center}
+		\vspace{-5mm}
 		
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches (2)};
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{0.1cm}
+			
+			\begin{enumerate}
+				\setcounter{enumi}{2} % Set the starting number to 5
+				\item \href{https://martinfowler.com/articles/ship-show-ask.html}{Ship / Show / Ask} has 3 categories for merges: (continued)
+			\end{enumerate}
+			\vspace{-3mm}
+			\begin{center}
+				\textcolor{background}{
+					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{6cm}}
+						\arrayrulecolor{boxcolor} % Table line color
+						\rowcolor{headercolor} % Header row color
+						\multicolumn{1}{c|}{\centering \textbf{Category}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} 
+						\tablebash{Show} & Open a Pull Request with your change but merge without waiting for anyone. \\
+						\rowcolor{rowcolor2} 
+						\tablebash{Ask} & Open a Pull Request and wait for approval before merging  \\
+					\end{tabularx}
+				}
+			\end{center}
+			\vspace{-5mm}
+			
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches (3)};
 \end{tikzpicture}
