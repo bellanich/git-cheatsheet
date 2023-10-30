@@ -6,9 +6,17 @@ Interested in getting to know Git better? This repository offers[ a concise guid
 
 Whether you're a Git novice looking to grasp the basics or an experienced developer in need of a quick reference, this cheatsheet has you covered. It provides a handy overview of Git commands, their applications, and explanations of core Git concepts. With this cheatsheet, you'll be well-prepared for version control in your software projects. Customize it by forking or downloading the repo and edit it in LaTeX. Happy version controlling!
 
-![Alt Text](./images/NUX_Octodex.gif)
+<!-- ![Alt Text](./images/NUX_Octodex.gif)
 
-Original image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/)
+Original image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/) -->
+
+
+<a href="happy-octocat">
+   <img src="./images/NUX_Octodex.gif" width="300" height="300">
+</a>
+
+Image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/)
+
 
 ## Usage
 
@@ -33,14 +41,15 @@ If you'd like to contribute to this project by adding new commands, improving th
 
 If you have any questions, feedback, or suggestions, please don't hesitate to open an issue or contact me via [LinkedIn](https://www.linkedin.com/in/bella-nicholson/).
 
-## License
 
-This Git Cheatsheet is open-source and available under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as needed.
-
-## Sources
+## Acknowledgements
 
 All sources used to formulate the cheatsheet contents are included as hyperlinks. Here are some additional sources that I would like to call attention to:
 
  - **Inspiration.** This cheatsheet was inspired by the course contents of the [Git Complete: The definitive, step-by-step guide to Git Udemy Course](https://www.udemy.com/course/git-complete/) by [Jason Taylor](https://www.linkedin.com/in/jasongtaylor/). I've gone into further details about selected topics and included broader version control concepts.
  -  **Original cheatsheet template.** The original LaTeX cheatsheet template can be found [here](https://www.overleaf.com/latex/examples/matplotlib-and-random-cheat-sheet/yttxrcxntbht).
  -  **Formatting.** I used [the Shades of Purple color palette](https://github.com/ahmadawais/shades-of-purple-vscode#sops-syntax-colors) to make this cheatsheet more visually appealing.
+
+## License
+
+This Git Cheatsheet is open-source and available under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as needed.
