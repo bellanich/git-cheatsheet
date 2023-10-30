@@ -7,8 +7,8 @@ Interested in getting to know Git better? This repository offers[ a concise guid
 Whether you're a Git novice looking to grasp the basics or an experienced developer in need of a quick reference, this cheatsheet has you covered. It provides a handy overview of Git commands, their applications, and explanations of core Git concepts. With this cheatsheet, you'll be well-prepared for version control in your software projects. Customize it by forking or downloading the repo and edit it in LaTeX. Happy version controlling!
 
 
-<a href="./images/NUX_Octodex.gif">
-   <img src="./images/NUX_Octodex.gif" width="300" height="300">
+<a href="happy-octocat">
+   <img src="./src/images/NUX_Octodex.gif" width="300" height="300">
 </a>
 
 Image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/)
