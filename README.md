@@ -2,19 +2,6 @@
 
 **by: Bella Nicholson**
 
-
-- [Git It Right: A Complete Cheatsheet](#git-it-right-a-complete-cheatsheet)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-    - [Option 1: Download cheatsheet as a PDF](#option-1-download-cheatsheet-as-a-pdf)
-    - [Option 2: Compile from Source](#option-2-compile-from-source)
-  - [Contributing](#contributing)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-
-
-## Introduction
-
 Interested in getting to know Git better? This repository offers[ a concise guide](https://github.com/bellanich/git-cheatsheet/blob/main/git_cheatsheet.pdf) to the essential Git commands and theory, empowering you for efficient and effective Git usage.
 
 Whether you're a Git novice looking to grasp the basics or an experienced developer in need of a quick reference, this cheatsheet has you covered. It provides a handy overview of Git commands, their applications, and explanations of core Git concepts. With this cheatsheet, you'll be well-prepared for version control in your software projects. Customize it by forking or downloading the repo and edit it in LaTeX. Happy version controlling!
@@ -27,10 +14,9 @@ Whether you're a Git novice looking to grasp the basics or an experienced develo
 Image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/)
 
 
-
 ## Usage
 
-You have two options for using  this cheat-sheet.
+You have two options for using  this cheat-sheet: download it as PDF or compile it from the source code.
 
 ### Option 1: Download cheatsheet as a PDF
 
