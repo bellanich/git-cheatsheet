@@ -6,10 +6,6 @@ Interested in getting to know Git better? This repository offers[ a concise guid
 
 Whether you're a Git novice looking to grasp the basics or an experienced developer in need of a quick reference, this cheatsheet has you covered. It provides a handy overview of Git commands, their applications, and explanations of core Git concepts. With this cheatsheet, you'll be well-prepared for version control in your software projects. Customize it by forking or downloading the repo and edit it in LaTeX. Happy version controlling!
 
-<!-- ![Alt Text](./images/NUX_Octodex.gif)
-
-Original image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/) -->
-
 
 <a href="happy-octocat">
    <img src="./images/NUX_Octodex.gif" width="300" height="300">
@@ -18,17 +14,33 @@ Original image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/) 
 Image source: [GitHub's Octodex](https://octodex.github.com/nuxtocat/)
 
 
+Table of Contents:
+- [Git It Right: A Complete Cheatsheet](#git-it-right-a-complete-cheatsheet)
+  - [Usage](#usage)
+    - [Option 1: Download cheatsheet as a PDF](#option-1-download-cheatsheet-as-a-pdf)
+    - [Option 2: Compile from Source](#option-2-compile-from-source)
+  - [Contributing](#contributing)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+
+
+
 ## Usage
 
-To use this cheatsheet, you have two options.
+You have two options for using  this cheat-sheet.
 
-1. **Download PDF**: You can download the PDF version of the cheatsheet by clicking [here](https://github.com/bellanich/git-cheatsheet/blob/main/git_cheatsheet.pdf). Feel free to print it or keep it as a handy reference.
+### Option 1: Download cheatsheet as a PDF
 
-2. **Compile from Source**: If you prefer to customize the cheatsheet, you can compile the LaTeX source files yourself. Follow these steps:
+You can download the PDF version of the cheatsheet by clicking [here](https://github.com/bellanich/git-cheatsheet/blob/main/git_cheatsheet.pdf). Feel free to print it or keep it as a handy reference.
 
-   - **Prerequisites**: Ensure you have LaTeX installed on your system. You can download it from [LaTeX Project](https://www.latex-project.org/).
 
-   - **Clone the Repository**: Clone this repository to your local machine using Git.
+### Option 2: Compile from Source
+
+If you prefer to customize the cheatsheet, you can compile the LaTeX source files yourself. Follow these steps:
+
+   1. **Prerequisites.** Ensure you have LaTeX installed on your system. You can download it from [LaTeX Project](https://www.latex-project.org/).
+
+   2. **Clone the Repository.** Clone this repository to your local machine using Git.
 
 
 ## Contributing
