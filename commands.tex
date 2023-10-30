@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%
+% Style in-line code commands
+%%%%%%%%%%%%%%%
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+
+% "Regular" in-line code formatting
+\colorlet{inline-code-color}{lightpurple}
+\lstdefinestyle{inlinecode}{
+	basicstyle=\ttfamily\color{inline-code-color},
+	keywordstyle=\bfseries,
+	breaklines=true,
+	keepspaces=true,
+	frame=single,
+}
+\newcommand{\inlinebash}[1]{\lstinline[style=inlinecode]{#1}}
+
+
+% Table in-line code formatting
+\lstdefinestyle{tablebash}{
+	basicstyle=\ttfamily\color{darkbackground},
+	keywordstyle=\bfseries,
+	breaklines=true,
+	keepspaces=true,
+	frame=single,
+	literate=%
+	{"}{\textquotedbl}1
+	{'}{\textquotesingle}1
+}
+\newcommand{\tablebash}[1]{{\lstinline[style=tablebash]{#1}}}
+%%%%%%%%%%%%%%%

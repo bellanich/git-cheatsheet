@@ -2,15 +2,17 @@
 % MatPlotLib and Random Cheat Sheet
 %
 % Edited by Michelle Cristina de Sousa Baltazar
-% Updated by Bella Nicholson
 %
 % http://matplotlib.org/api/pyplot_summary.html
 % http://matplotlib.org/users/pyplot_tutorial.html
 %
+% Updated by Bella Nicholson
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper]{article}
-\usepackage[landscape]{geometry}
+\usepackage{cheatsheetstyle}
+
+% General imports
 \usepackage{url}
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -24,124 +26,13 @@
 \usepackage{fontawesome}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
-
-%%%%%%%%%%%%%%
-% Table formatting
-%%%%%%%%%%%%%%
-\definecolor{tableoutlinecolor}{HTML}{A599E9}
-\usepackage{colortbl}
-\usepackage{tabularx}
-%%%%%%%%%%%%%%
-
-%\title{Git Cheat Sheet}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{bm}
 
-% Insert nice figures in 
-\usepackage{graphicx}
-\usepackage{caption}
-\captionsetup{
-	font=tiny,
-}
-\usepackage{subcaption}
-
-
-
-\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\loss}[0]{\mathcal{L}}
-\newcommand{\chain}[3]{\frac{\partial #1}{\partial #2}\frac{\partial #2}{\partial #3}}
-\newcommand{\eq}[1]{\begin{equation*}\begin{split}#1\end{split}\end{equation*}}
-\newcommand{\coderef}[0]{Please find the implementation in the folder with the code files.}
-\newcommand{\TODO}[1]{\textbf{\textcolor{red}{#1}}}
-
-
-%%%%%%%%%%%%%%
-% Shades of purple colors
-%%%%%%%%%%%%%%
-% Color definitions taken from: https://github.com/ahmadawais/shades-of-purple-vscode
-
-% Define colors
-\definecolor{background}{HTML}{2D2B55}
-\definecolor{darkbackground}{HTML}{1E1E3F}
-\colorlet{boxcolor}{background!95}
-\definecolor{textcolor}{HTML}{FFFFFF}
-\definecolor{goldenyellow}{HTML}{FAD000}
-\definecolor{lightyellow}{HTML}{FFEE80} 
-\definecolor{lightpurple}{HTML}{A599E9}
-\definecolor{brightpurple}{HTML}{B362FF}
-\definecolor{brightgreen}{HTML}{3AD900}
-\colorlet{green}{brightgreen!65} 
-\definecolor{icyblue}{HTML}{9EFFFF}
-\definecolor{deeppink}{HTML}{FF628C}
-\definecolor{icypink}{HTML}{FB94FF}
-\definecolor{paleyellow}{HTML}{FAEFA5}
-\definecolor{orange}{HTML}{FF9D00}
-\definecolor{red}{HTML}{EC3A37}
-\colorlet{linkcolor}{lightyellow}
-
-% Apply color selection to document
-\pagecolor{background}
-\color{textcolor}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=linkcolor,
-	urlcolor=linkcolor,
-}
-
-%%%%%%%%%%%%%%
-%     Make a footer
-%%%%%%%%%%%%%%
-\geometry{left=0.25cm,right=0.25cm,top=0.25cm,bottom=0.6cm, footskip=0pt}
-\usepackage{fancyhdr}
-\usepackage[absolute,overlay]{textpos}
-\pagestyle{fancy}
-
-\fancyfoot{}  % Clear all footer fields
-\fancyfoot[R]{ 
-	\textcolor{lightpurple}{\small{
-	\vspace{-3cm}
-	\href{https://github.com/bellanich}{\color{lightpurple} \faGithub{} {bellanich}} \hspace{0.3cm}
-	\href{https://www.linkedin.com/in/bella-nicholson}{\color{lightpurple} \faLinkedinSquare{} {bella-nicholson}}
-	}}
-}
-%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%
-% Make pretty in-line code
-%%%%%%%%%%%%%%%
-\usepackage{listings}
-\usepackage[T1]{fontenc}
-\colorlet{inline-code-color}{lightpurple}
-% Define bash command styling for using in textbox
-\lstdefinestyle{inlinecode}{
-	basicstyle=\ttfamily\color{inline-code-color},
-	keywordstyle=\bfseries,
-	breaklines=true,
-	keepspaces=true,
-	frame=single,
-}
-\newcommand{\inlinebash}[1]{\lstinline[style=inlinecode]{#1}}
-
-
-% Define bash command styling for using in table
-\lstdefinestyle{tablebash}{
-	basicstyle=\ttfamily\color{darkbackground},
-	keywordstyle=\bfseries,
-	breaklines=true,
-	keepspaces=true,
-	frame=single,
-	literate=%
-	{"}{\textquotedbl}1
-	{'}{\textquotesingle}1
-}
-\newcommand{\tablebash}[1]{{\lstinline[style=tablebash]{#1}}}
-%%%%%%%%%%%%%%%
-
-
-\parindent0pt
-\parskip2pt
+% Apply formatting
+\input{colors.tex}
+\input{commands.tex}
 
 
 \begin{document}
