@@ -1,4 +1,4 @@
-# LaTeX files to ignore
+# LaTeX output files to ignore
 *.aux
 *.log
 *.synctex.gz
@@ -8,4 +8,5 @@
 .DS_Store
 
 # Repo specific ignore files
-*.pdf
+# Ignore auto-generated PDF
+main.pdf
