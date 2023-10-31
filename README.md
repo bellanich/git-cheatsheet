@@ -25,17 +25,19 @@ You can download the PDF version of the cheatsheet by clicking [here][compiled-c
 
 ### Option 2: Compile from Source
 
-If you prefer to customize the cheatsheet, you can compile the LaTeX source files yourself. Follow these steps:
+If you prefer to customize the cheatsheet, you can compile the LaTeX source files yourself. Follow the steps outlined below.
 
-   1. **Prerequisites.** Ensure you have LaTeX installed on your system. You can download it from [LaTeX Project][weblink-latex-project].
+   1. **Prerequisites.** If you wish to compile LaTeX locally, then ensure that you have **(a)** [LaTeX][weblink-latex-project] installed on your system and **(b)** an integrated writing environment for LaTeX like [TexStudio][weblink-download-texstudio]. Alternatively, you can compile via a web-based application like [Overleaf][weblink-overleaf-homepage].
 
    2. **Clone the Repository.** Clone this repository to your local machine using Git.
 
-**Source code structure.** The code structure within the `src` dir is as follows:
+#### Source code structure
+
+All the LaTeX source code is located in the `src` directory.
 
 - The [src/main.tex][source-code-main.tex] file generates the cheatsheet PDF. This means importing all the necessary LaTeX packages, cheatsheet documents, and predefined document styling.
-- The [src/sections/][source-code-sections-dir] directory holds the contents of the cheatsheet.
-- The [src/images/][source-code-images-dir] directory contains all the images used in this repo.
+- The [src/sections/][source-code-sections-dir] directory holds the topic-specific cheatsheet contents.
+- The [src/images/][source-code-images-dir] directory contains all the figures used in this repo.
 - The [src/styling/][source-code-styling-dir] directory contains page formatting definitions, color definitions, and custom (style-specific) commands definitions.
 
 
@@ -71,3 +73,5 @@ This Git Cheatsheet is open-source and available under the [MIT License](LICENSE
 [source-code-sections-dir]: ./src/sections
 [source-code-images-dir]: src/images
 [source-code-styling-dir]: ./src/styling
+[weblink-download-texstudio]: https://www.texstudio.org
+[weblink-overleaf-homepage]: https://www.overleaf.com
