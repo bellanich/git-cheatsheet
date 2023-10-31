@@ -16,7 +16,7 @@ Image source: [GitHub's Octodex][octocat-gif]
 
 ## Usage
 
-You have two options for using  this cheat-sheet: download it as PDF or compile it from the source code.
+You have two options for using  this cheatsheet: download it as PDF or compile it from the source code.
 
 ### Option 1: Download cheatsheet as a PDF
 
@@ -33,7 +33,7 @@ If you prefer to customize the cheatsheet, you can compile the LaTeX source file
 
 #### Source code structure
 
-All the LaTeX source code is located in the `src` directory.
+All the LaTeX source code is located within the `src` directory. Here is a high-level walkthrough of its structure:
 
 - The [src/main.tex][source-code-main.tex] file generates the cheatsheet PDF. This means importing all the necessary LaTeX packages, cheatsheet documents, and predefined document styling.
 - The [src/sections/][source-code-sections-dir] directory holds the topic-specific cheatsheet contents.
