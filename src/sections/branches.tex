@@ -82,7 +82,6 @@
 \end{tikzpicture}
 
 
-
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
@@ -94,11 +93,11 @@
 			
 				\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
 				\begin{itemize}
-						\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and master branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
+						\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and main branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
 				\end{itemize}
 			
 			\begin{itemize}
-				\item \textit{Pull with a rebase.} You can pull changes from \inlinebash{main} into your feature branch as a rebase. This keeps your Git history flat. Use \inlinebash{git pull --rebase origin master}.
+				\item \textit{Pull with a rebase.} You can pull changes from \inlinebash{main} into your feature branch as a rebase. This keeps your Git history flat. Use \inlinebash{git pull --rebase origin main}.
 			\end{itemize}
 			
 			The \textcolor{emphasiscolor}{Golden Rule of Rebasing} is do \textcolor{emphasiscolor}{\textbf{not}} rebase on \textcolor{emphasiscolor}{\textbf{public branches}}. 
@@ -131,13 +130,13 @@
 					\multicolumn{1}{c|}{\centering \textbf{Branch}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 					\hline % Add a horizontal line below the header row
 					\rowcolor{rowcolor1} % New Row
-					\tablebash{master} & The code that's in production \\
+					\tablebash{main} & The code that's in production \\
 					\rowcolor{rowcolor2} 
-					\tablebash{develop} & Where developers merge their features into. Branches off of \tablebash{master}. \\
+					\tablebash{develop} & Where developers merge their features into. Branches off of \tablebash{main}. \\
 					\rowcolor{rowcolor1} % New Row
 					\tablebash{feature} & One new feature per branch. Branches off of \tablebash{develop}. Merge back once stable. \\
 					\rowcolor{rowcolor2} % New Row
-					\tablebash{release} & Prepare for a new production release, needs to be merged back into \tablebash{master} and \tablebash{develop}. \\
+					\tablebash{release} & Prepare for a new production release, needs to be merged back into \tablebash{main} and \tablebash{develop}. \\
 					\rowcolor{rowcolor1} % New Row
 					\tablebash{hotfix} & Fix a bug that has been discovered and must be resolved (usually from production) \\
 				\end{tabularx}
@@ -147,7 +146,7 @@
 		
 		\begin{enumerate}
 			\setcounter{enumi}{1} % Set the starting number to 5
-			\item In \href{https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development}{trunk-based development}, developers merge small, frequent updates to a core “trunk” or \inlinebash{main} branch. You \textbf{push directly} into \inlinebash{master} and use \inlinebash{release} branches.
+			\item In \href{https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development}{trunk-based development}, developers merge small, frequent updates to a core “trunk” or \inlinebash{main} branch. You \textbf{push directly} into \inlinebash{main} and use \inlinebash{release} branches.
 			\item \href{https://martinfowler.com/articles/ship-show-ask.html}{Ship / Show / Ask} has three categories for merges:
 		\end{enumerate}
 		\vspace{-3mm}
