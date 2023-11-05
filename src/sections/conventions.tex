@@ -26,13 +26,16 @@
 						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 						\hline % Add a horizontal line below the header row
 						\rowcolor{rowcolor1} \tablebash{HEAD} & Shorthand in Git for the last commit \\
-						\rowcolor{rowcolor2} % Color of the second row
+						\rowcolor{rowcolor2} % Color of the row
 						\tablebash{HEAD\^} & Shorthand for 2nd to last commit. \\
-						\rowcolor{rowcolor1} % Color of the second row
-						\tablebash{HEAD\^3} & Shorthand for 3 commits before current \tablebash{HEAD}. \\
+						\rowcolor{rowcolor1} % Color of the row
+						\tablebash{HEAD}$\sim$\tablebash{3} & Shorthand for 3 commits before current \tablebash{HEAD} for \textbf{linear branch histories} \\
+						\rowcolor{rowcolor2} % Color of the row
+						\tablebash{HEAD\^3} & Traverses a \textbf{non-linear history}, where exact commits back from  \tablebash{HEAD} depends on branching pattern \\
 					\end{tabularx}
 				}
 			\end{center}
+			\vspace{-1mm}
 			
 			\underline{Default branch name}: In 2020, \href{https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch}{the Git community moved away from calling the default branch name from \inlinebash{master} to calling it \inlinebash{main}}.
 			\begin{itemize}
@@ -40,7 +43,7 @@
 				\item \textit{Implications.} Some older projects still use \inlinebash{master} as their main branch name, since renaming it is a risky process. 
 			\end{itemize}
 			
-			\vspace{-2mm}
+			\vspace{-3mm}
 
 			
 		\end{minipage}
@@ -54,10 +57,10 @@
 			\vspace{0.1cm}
 			
 							
-			Reasons keeping \inlinebash{master} as the default in older project include:
+			Reasons for keeping \inlinebash{master} as the default in older project include:
 			\begin{itemize}
-					\item This switch can cause backwards compatibility issues with earlier project releases
-					\item Complicated CI/CD processes can consequently fail in non-obvious (difficult to troubleshoot) ways
+					\item Renaming it to \inlinebash{main} can cause backwards compatibility issues with earlier project releases
+					\item Complicated CI/CD processes can consequently fail in non-obvious ways that are difficult to troubleshoot
 					\item Integrations with third-party tools and services can break
 			\end{itemize}
 			\vspace{0.1cm}
