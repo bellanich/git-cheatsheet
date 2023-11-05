@@ -8,7 +8,6 @@
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
-			\vspace{0.1cm}
 			
 			\underline{Introduction}: The \textcolor{outlinecolor}{Git stash} command allows you to temporarily save and store changes in your working directory that are not ready to be committed. It stores these changes as a \textcolor{outlinecolor}{stack data structure}. 
 			\begin{itemize}
@@ -38,22 +37,6 @@
 				}
 			\end{center}
 			
-			\underline{Move stashes}: Eventually, you'll either \textbf{(a)} want to delete your stashed work to declutter the stash stack or \textbf{(b)} move your stashed work back into the working directory.
-			\vspace{-2mm}
-			\begin{center}
-				\textcolor{background}{
-					\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
-						\arrayrulecolor{boxcolor} % Table line color
-						\rowcolor{headercolor} % Header row color
-						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
-						\hline % Add a horizontal line below the header row
-						\rowcolor{rowcolor1} % New Row
-						\tablebash{git stash apply} & Applies most recent stash to working directory \textbf{without deleting it} from stash stack \\
-						\rowcolor{rowcolor2} 
-						\tablebash{git stash drop} & Manually delete most recent stash from stack\\
-					\end{tabularx}
-				}
-			\end{center}
 			\vspace{-4mm}
 			
 		\end{minipage}
@@ -68,7 +51,7 @@
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
 			
-			Commands to move stashes: (continued)
+			\underline{Move stashes}: Eventually, you'll either \textbf{(a)} want to delete your stashed work to declutter the stash stack or \textbf{(b)} move your stashed work back into the working directory.
 			\vspace{-2mm}
 			\begin{center}
 				\textcolor{background}{
@@ -77,6 +60,10 @@
 						\rowcolor{headercolor} % Header row color
 						\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 						\hline % Add a horizontal line below the header row
+						\rowcolor{rowcolor1} % New Row
+						\tablebash{git stash apply} & Applies most recent stash to working directory \textbf{without deleting it} from stash stack \\
+						\rowcolor{rowcolor2} 
+						\tablebash{git stash drop} & Manually delete most recent stash from stack\\
 						\rowcolor{rowcolor1} % New Row
 						\tablebash{git stash pop} & Shorthand combination of \tablebash{git stash apply} and \tablebash{git stash drop} \\
 						\rowcolor{rowcolor2}
@@ -94,7 +81,8 @@
 			\begin{enumerate}
 				\item Stash the changes that you want move
 						\item[2.] Use the command \inlinebash{git stash branch new\_branch\_name} to automatically create a new branch, where your stash is applied. Your stash will also be removed from the stack.
-				\end{enumerate}
+			\end{enumerate}
+			\vspace{-4mm}
 			
 			
 		\end{minipage}
