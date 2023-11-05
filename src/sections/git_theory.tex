@@ -28,23 +28,25 @@
 				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
 			\end{minipage}
 			\vspace{1mm}
-			
-			\underline{Where is remote stored?}: The remote repo lives on a \textcolor{outlinecolor}{version control hosting services}, which provides a web-based management interface. 
-			\begin{itemize}
-				\item \textit{Examples.} Popular Git repository hosting services include \href{https://github.com}{GitHub}, \href{https://about.gitlab.com}{GitLab}, and \href{https://bitbucket.org/product}{BitBucket}. See \href{https://gitprotect.io/blog/top-git-hosting-services-for-2022/}{here} for more info.
-				\item \textit{Open-source standard.} \href{https://github.com}{GitHub} is the most popular one and is considered the standard for hosting open-source projects. 
-			\end{itemize}
-			\textit{Different from Git.}
-			
-			
+		
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Git Theory};
 \end{tikzpicture}
+
+
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 		\vspace{0.1cm}
+		
+		\underline{Where is remote stored?}: The remote repo lives on a \textcolor{outlinecolor}{version control hosting services} and is accessible via a web-based interface. 
+		\begin{itemize}
+			\item \textit{Examples.} Popular Git repository hosting services include \href{https://github.com}{GitHub}, \href{https://about.gitlab.com}{GitLab}, and \href{https://bitbucket.org/product}{BitBucket}. See \href{https://gitprotect.io/blog/top-git-hosting-services-for-2022/}{here} for more info.
+			\item \textit{Open-source standard.} \href{https://github.com}{GitHub} is considered the standard for hosting open-source projects due to its immense popularity. 
+		\end{itemize}
+		
+		Remote hosting services \textcolor{outlinecolor}{offer unique functionalities} that are \textcolor{outlinecolor}{separate from Git}, including: \href{https://docs.github.com/en/get-started/learning-about-github/access-permissions-on-github}{access control},  \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests}{pull requests}, \href{https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues}{issue tracking}, and automation tools like \href{https://github.com/features/actions}{GitHub Actions}. \\
 		
 		\underline{Tracking}: A \textcolor{outlinecolor}{tracked file}  is any file that Git is aware of and is actively tracking. In other words, any files that aren't new.
 		\vspace{-2mm}
