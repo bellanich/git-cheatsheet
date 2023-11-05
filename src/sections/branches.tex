@@ -4,14 +4,11 @@
 \colorlet{rowcolor1}{outlinecolor!70}
 \colorlet{rowcolor2}{outlinecolor!50}
 
-% Tweak outlinecolor used for text emphasis so that it stands out from background
-%\definecolor{emphasiscolor}{HTML}{DA70D6}
 \colorlet{emphasiscolor}{outlinecolor!60}  
 
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
-			\vspace{0.1cm}
 			
 			\underline{Introduction}: It's a best practice to create all your changes on \textcolor{emphasiscolor}{feature (or topic) branches}, make sure these changes stable, and then merge into the \inlinebash{main} branch.
 			
@@ -72,9 +69,10 @@
 				\centering
 				\includegraphics[width=\textwidth]{images/3_way_merge_after.png} 
 				\captionsetup{justification=centering}
-				\captionof{figure}{After 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
+				\captionof{figure}{After a 3-way merge \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
 			\end{minipage}
 			% End figure
+			\vspace{-3mm}
 			
 		\end{minipage}
 	};
@@ -85,27 +83,41 @@
 \begin{tikzpicture}
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
-			\vspace{0.1cm}
+			\vspace{1mm}
 			
-						
-				Either way, you can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This ensures that your commit history size remains manageable. Of course, \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations. \\
+%			% Start figure
+%			\hfill
+%			\begin{minipage}{0.35\textwidth} 
+%				\centering
+%				\includegraphics[width=\textwidth]{images/3_way_merge_before.png}
+%				\captionsetup{justification=centering}
+%				\captionof{figure}{Before 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{\faLink{} Source}}
+%			\end{minipage}%
+%			\hfill
+%			\begin{minipage}{0.45\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{images/3_way_merge_after.png} 
+%				\captionsetup{justification=centering}
+%				\captionof{figure}{After 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
+%			\end{minipage}
+%			% End figure
+%			\vspace{1mm}
 			
+			Either way, you can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This ensures that your commit history size remains manageable. Of course, \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations. \\
 			
-				\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
-				\begin{itemize}
-						\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and main branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
-				\end{itemize}
-			
+			\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
 			\begin{itemize}
+				\item \textit{Why?}  This lets you \textcolor{emphasiscolor}{maintain a linear project history} when your feature and main branches start to diverge. It also eliminates the unnecessary merge commits required by merging.
 				\item \textit{Pull with a rebase.} You can pull changes from \inlinebash{main} into your feature branch as a rebase. This keeps your Git history flat. Use \inlinebash{git pull --rebase origin main}.
 			\end{itemize}
+			\vspace{1mm}
 			
 			The \textcolor{emphasiscolor}{Golden Rule of Rebasing} is do \textcolor{emphasiscolor}{\textbf{not}} rebase on \textcolor{emphasiscolor}{\textbf{public branches}}. 
 			\begin{itemize}
 				\item \textit{Why?} Branch histories can diverge. This can only be resolved with a merge, which would pollute the commit history. 
 				\item \textit{More info.} Check out  \href{https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing}{this explanation}.
 			\end{itemize}
-			\smallskip
+			
 	
 			% Start figure
 			\begin{minipage}{\textwidth}
