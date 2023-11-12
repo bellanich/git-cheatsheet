@@ -28,7 +28,10 @@
 						\rowcolor{rowcolor1} \tablebash{git config --global user.name "bellanich"} & Set your global username \\
 						\rowcolor{rowcolor2} % Color of the second row
 						\tablebash{git config --global user.email "youremail@gmail.com"} & Set your global email \\
-						\rowcolor{rowcolor1} \tablebash{git config --global --list} & Check your global configs \\
+						\rowcolor{rowcolor1}
+						\tablebash{git config --global --list} & Check your global configs \\
+						\rowcolor{rowcolor2}
+						\tablebash{git config --global pager.branch false} & Turn off \href{https://fedoramagazine.org/5-cool-terminal-pagers-in-fedora/}{\textcolor{background}{terminal pager}} for \tablebash{git branch} command \\
 					\end{tabularx}
 				}
 			\end{center}
@@ -51,16 +54,8 @@
 					\end{tabularx}
 				}
 			\end{center}
-
-			
-%			\begin{minipage}{\textwidth}
-%				\centering
-%%				\vspace{-2mm}
-%				\includegraphics[width=0.5\textwidth]{images/git_stages.png}
-%				\vspace{-2mm}
-%				\captionof{figure}{Git states and associated commands. \href{https://www.udemy.com/course/git-complete/}{ \faLink{}  Source}}
-%			\end{minipage}
-			
+		
+		\vspace{-4mm}
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Quick Start};
