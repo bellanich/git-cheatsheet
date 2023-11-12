@@ -11,6 +11,9 @@
 		\begin{minipage}{0.3\textwidth}
 			
 			\underline{Introduction}: It's a best practice to create all your changes on \textcolor{emphasiscolor}{feature (or topic) branches}, make sure these changes stable, open a \href{https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067}{pull request for review}, and then merge into the \inlinebash{main} branch.
+			\begin{itemize}
+				\item \textit{Note.} You can \href{https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches}{protect important branches} via your chosen remote hosting service.
+			\end{itemize}
 			
 			\vspace{-2mm}
 			\begin{center}
@@ -29,7 +32,7 @@
 						\rowcolor{rowcolor2} 
 						\tablebash{git branch --delete branch\_name} & Delete a \textbf{local} branch\\
 						\rowcolor{rowcolor1} 
-						\tablebash{git push origin --delete branch\_name} & Deletes a \textbf{remote} branch\\
+						\tablebash{git push origin --delete branch\_name} & Delete a \textbf{remote} branch\\
 					\end{tabularx}
 				}
 			\end{center}
@@ -59,25 +62,7 @@
 			% End figure
 			\begin{itemize}
 				\item A \textcolor{emphasiscolor}{3-way merge} happens when histories between two branches diverge. This can result in a Git conflict. i.e.,
-			\end{itemize}
-%			% Start figure
-%			\hfill
-%			\begin{minipage}{0.35\textwidth} 
-%				\centering
-%				\includegraphics[width=\textwidth]{images/3_way_merge_before.png}
-%				\captionsetup{justification=centering}
-%				\captionof{figure}{Before 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{\faLink{} Source}}
-%			\end{minipage}%
-%			\hfill
-%			\begin{minipage}{0.45\textwidth}
-%				\centering
-%				\includegraphics[width=\textwidth]{images/3_way_merge_after.png} 
-%				\captionsetup{justification=centering}
-%				\captionof{figure}{After a 3-way merge \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
-%			\end{minipage}
-%			% End figure
-%			\vspace{-3mm}
-%			
+			\end{itemize}		
 		\end{minipage}
 	};
 	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches};
@@ -126,7 +111,6 @@
 			% Start figure
 			\begin{minipage}{\textwidth}
 				\centering
-				%				\vspace{-2mm}
 				\includegraphics[width=0.5\textwidth]{images/rebase_visualized.png}
 				\vspace{-2mm}
 				\captionof{figure}{The effects of a \inlinebash{git rebase}. \href{https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase}{ \faLink{}  Source}}
