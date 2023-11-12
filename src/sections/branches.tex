@@ -11,6 +11,9 @@
 		\begin{minipage}{0.3\textwidth}
 			
 			\underline{Introduction}: It's a best practice to create all your changes on \textcolor{emphasiscolor}{feature (or topic) branches}, make sure these changes stable, open a \href{https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067}{pull request for review}, and then merge into the \inlinebash{main} branch.
+			\begin{itemize}
+				\item \textit{Note.} You can \href{https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches}{protect important branches} via your chosen remote hosting service.
+			\end{itemize}
 			
 			\vspace{-2mm}
 			\begin{center}
@@ -27,13 +30,17 @@
 						\rowcolor{rowcolor1} 
 						\tablebash{git branch -m old\_branch\_name new\_branch\_name} & Rename your Git branch \\
 						\rowcolor{rowcolor2} 
-						\tablebash{git branch --delete branch\_name} & Deletes a \textbf{local} branch\\
+						\tablebash{git branch --delete branch\_name} & Delete a \textbf{local} branch\\
+						\rowcolor{rowcolor1} 
+						\tablebash{git push origin --delete branch\_name} & Delete a \textbf{remote} branch\\
 					\end{tabularx}
 				}
 			\end{center}
 			\vspace{-1mm}
 			
-			\underline{Merging}: Insert the changes from one branch into another \textcolor{emphasiscolor}{as a new commit}. Main types of merges are:
+			\underline{Merging}: Insert the changes from one branch into another \textcolor{emphasiscolor}{as a new commit}. You can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This keeps your commit history size manageable. \\
+			
+			Main types of merges are:
 			\begin{itemize}
 				\item A \textcolor{emphasiscolor}{fast forward merge} happens when one branch is ahead of another. i.e.,
 			\end{itemize}
@@ -55,7 +62,18 @@
 			% End figure
 			\begin{itemize}
 				\item A \textcolor{emphasiscolor}{3-way merge} happens when histories between two branches diverge. This can result in a Git conflict. i.e.,
-			\end{itemize}
+			\end{itemize}		
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches};
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			\vspace{1mm}
+			
 			% Start figure
 			\hfill
 			\begin{minipage}{0.35\textwidth} 
@@ -69,41 +87,12 @@
 				\centering
 				\includegraphics[width=\textwidth]{images/3_way_merge_after.png} 
 				\captionsetup{justification=centering}
-				\captionof{figure}{After a 3-way merge \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
+				\captionof{figure}{After 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
 			\end{minipage}
 			% End figure
-			\vspace{-3mm}
-			
-		\end{minipage}
-	};
-	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Branches};
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
-		\begin{minipage}{0.3\textwidth}
 			\vspace{1mm}
 			
-%			% Start figure
-%			\hfill
-%			\begin{minipage}{0.35\textwidth} 
-%				\centering
-%				\includegraphics[width=\textwidth]{images/3_way_merge_before.png}
-%				\captionsetup{justification=centering}
-%				\captionof{figure}{Before 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{\faLink{} Source}}
-%			\end{minipage}%
-%			\hfill
-%			\begin{minipage}{0.45\textwidth}
-%				\centering
-%				\includegraphics[width=\textwidth]{images/3_way_merge_after.png} 
-%				\captionsetup{justification=centering}
-%				\captionof{figure}{After 3-way merge. \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{ \faLink{}  Source}}
-%			\end{minipage}
-%			% End figure
-%			\vspace{1mm}
-			
-			Either way, you can \textcolor{emphasiscolor}{squash} multiple commits into one as you merge. This ensures that your commit history size remains manageable. Of course, \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations. \\
+			Other \href{https://www.geeksforgeeks.org/merge-strategies-in-git/}{less common merge types} do exist for very specific situations.  \\
 			
 			\underline{Rebasing}: \textcolor{emphasiscolor}{rewrite the commit history} by "rewinding" the changes from one branch onto another. This means moving commits around.
 			\begin{itemize}
@@ -122,7 +111,6 @@
 			% Start figure
 			\begin{minipage}{\textwidth}
 				\centering
-				%				\vspace{-2mm}
 				\includegraphics[width=0.5\textwidth]{images/rebase_visualized.png}
 				\vspace{-2mm}
 				\captionof{figure}{The effects of a \inlinebash{git rebase}. \href{https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase}{ \faLink{}  Source}}
@@ -157,25 +145,10 @@
 		\vspace{-4mm}
 		
 		\begin{enumerate}
-			\setcounter{enumi}{1} % Set the starting number to 5
+			\setcounter{enumi}{1}
 			\item In \href{https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development}{trunk-based development}, developers merge small, frequent updates to a core “trunk” or \inlinebash{main} branch. You \textbf{push directly} into \inlinebash{main} and use \inlinebash{release} branches.
-			\item \href{https://martinfowler.com/articles/ship-show-ask.html}{Ship / Show / Ask} has three categories for merges:
 		\end{enumerate}
 		\vspace{-3mm}
-		\begin{center}
-			\textcolor{background}{
-				\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{6cm}}
-					\arrayrulecolor{boxcolor} % Table line color
-					\rowcolor{headercolor} % Header row color
-					\multicolumn{1}{c|}{\centering \textbf{Category}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
-					\hline % Add a horizontal line below the header row
-					\rowcolor{rowcolor1} % New Row
-					Ship &  Make a change \textbf{directly} into your mainline. Great for updated docs, simple bug fixes; etc. \\
-					\rowcolor{rowcolor2} 
-				\end{tabularx}
-			}
-		\end{center}
-		\vspace{-5mm}
 		
 		\end{minipage}
 	};
@@ -190,7 +163,7 @@
 			
 			\begin{enumerate}
 				\setcounter{enumi}{2} % Set the starting number to 5
-				\item \href{https://martinfowler.com/articles/ship-show-ask.html}{Ship / Show / Ask} has 3 categories for merges: (continued)
+				\item \href{https://martinfowler.com/articles/ship-show-ask.html}{Ship / Show / Ask} has 3 categories for merges:
 			\end{enumerate}
 			\vspace{-3mm}
 			\begin{center}
@@ -200,9 +173,11 @@
 						\rowcolor{headercolor} % Header row color
 						\multicolumn{1}{c|}{\centering \textbf{Category}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
 						\hline % Add a horizontal line below the header row
-						\rowcolor{rowcolor1} 
-						\tablebash{Show} & Open a Pull Request with your change but merge without waiting for anyone. \\
+						\rowcolor{rowcolor1} % New Row
+						Ship &  Make a change \textbf{directly} into your mainline. Great for updated docs, simple bug fixes; etc. \\
 						\rowcolor{rowcolor2} 
+						\tablebash{Show} & Open a Pull Request with your change but merge without waiting for anyone. \\
+						\rowcolor{rowcolor1} 
 						\tablebash{Ask} & Open a Pull Request and wait for approval before merging  \\
 					\end{tabularx}
 				}
