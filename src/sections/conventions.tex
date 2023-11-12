@@ -40,7 +40,6 @@
 			\underline{Default branch name}: In 2020, \href{https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch}{the Git community moved away from calling the default branch name from \inlinebash{master} to calling it \inlinebash{main}}.
 			\begin{itemize}
 				\item \textit{Why?} The term "master" has an \href{https://about.gitlab.com/blog/2021/03/10/new-git-default-branch-name/}{unsavory connotation for historical reasons}.
-				\item \textit{Implications.} Some older projects still use \inlinebash{master} as their main branch name, since renaming it is a risky process. 
 			\end{itemize}
 			
 			\vspace{-3mm}
@@ -55,6 +54,10 @@
 	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
 		\begin{minipage}{0.3\textwidth}
 			\vspace{0.1cm}
+			
+			\begin{itemize}
+				\item \textit{Implications.} Some older projects still use \inlinebash{master} as their main branch name, since renaming it is a risky process. 
+			\end{itemize}
 			
 							
 			Reasons for keeping \inlinebash{master} as the default in older project include:
