@@ -1,0 +1,45 @@
+\colorlet{outlinecolor}{icyblue}
+
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			
+				\underline{Introduction}: \href{https://githooks.com}{Git hooks} are ordinary scripts that Git executes whenever a certain events occurs.
+				\begin{itemize}
+					\item \textit{What language to use?} Git hooks \href{https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks}{can be written in any language}; however, they're usually written in \href{https://opensource.com/article/19/10/programming-bash-syntax-tools}{Bash}.
+					\item \textit{Setup.} Hooks are located in the \inlinebash{.git/hooks} directory, which Git automatically populates with sample scripts. Simply remove the \inlinebash{.sample} extension to activate a given hook.
+					\item \textit{Best practice.} Use a hook's reserved filename (rather than renaming it).
+				\end{itemize}
+
+				
+				\underline{Types of hooks}: Hooks fall into one of two categories.
+				\begin{enumerate}
+					\item \textcolor{outlinecolor}{Local hooks} are \textcolor{outlinecolor}{personal scripts} that allow developers to set up their own local workflow without interfering with a project's global configurations. i.e, \textcolor{outlinecolor}{don't push to remote}
+				\end{enumerate}
+				
+				
+%				\begin{center}
+%					\textcolor{background}{
+%						\begin{tabularx}{\textwidth}{>{\columncolor{rowcolor1}}X|>{\columncolor{rowcolor2}}p{4cm}}
+%							\arrayrulecolor{boxcolor} % Table line color
+%							\rowcolor{headercolor} % Header row color
+%							\multicolumn{1}{c|}{\centering \textbf{Git Command}} & \multicolumn{1}{c}{\centering \textbf{Description}} \\ % Center the header text
+%							\hline % Add a horizontal line below the header row
+%							\rowcolor{rowcolor1} % New Row
+%							\tablebash{git tag tag\_name} & Create a local \textbf{lightweight tag} for most recent commit \\
+%							\rowcolor{rowcolor2} 
+%							\tablebash{git tag tag\_name "your tag message"} & Create a local  \textbf{annotated tag} for most recent commit \\
+%						\end{tabularx}
+%					}
+%				\end{center}
+		\vspace{-2mm}
+
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Hooks};
+\end{tikzpicture}
