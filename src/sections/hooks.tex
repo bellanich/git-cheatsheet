@@ -1,0 +1,35 @@
+\colorlet{outlinecolor}{orange}
+
+\colorlet{headercolor}{outlinecolor}
+\colorlet{rowcolor1}{outlinecolor!70}
+\colorlet{rowcolor2}{outlinecolor!50}
+
+
+\begin{tikzpicture}
+	\node [mybox, fill=boxcolor, draw=outlinecolor] (box){%
+		\begin{minipage}{0.3\textwidth}
+			
+				\underline{Introduction}: \href{https://githooks.com}{Git hooks} are ordinary scripts that Git executes whenever a certain events occurs.
+				\begin{itemize}
+					\item \textit{What language to use?} Git hooks \href{https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks}{can be written in any language}; however, they're usually written in \href{https://opensource.com/article/19/10/programming-bash-syntax-tools}{Bash}.
+					\item \textit{Setup.} Hooks are located in the \inlinebash{.git/hooks} directory, which Git automatically populates with sample scripts. Simply remove the \inlinebash{.sample} extension to activate a given hook.
+					\item \textit{Best practice.} Use a hook's reserved filename (rather than renaming it).
+				\end{itemize}
+
+				
+				\underline{Types of hooks}: Hooks fall into one of two categories.
+				\begin{enumerate}
+					\item \textcolor{outlinecolor}{Local hooks} are \textcolor{outlinecolor}{personal scripts} that allow developers to set up their own local workflow without interfering with a project's global (i.e., remote) configurations.
+					\item \textcolor{outlinecolor}{Server-side hooks} are \textcolor{outlinecolor}{centrally managed} scripts that run on the remote repository server. Developers use them to \textbf{(a)} \textcolor{outlinecolor}{enforce project-wide standards} and \textbf{(b)} run server-level actions.
+					\begin{itemize}
+						\item \textit{Note.} Your ability to implement server-side hooks depends on who manages your remote repository servers. Hosting services usually have some restrictions in place.
+					\end{itemize}
+				\end{enumerate}
+				\vspace{-1mm}
+				
+				See \href{https://www.atlassian.com/git/tutorials/git-hooks}{here} for a comprehensive list of local and server-side Git hooks. Each hook has a specific, pre-defined purpose.
+
+		\end{minipage}
+	};
+	\node[fancytitle, right=10pt, fill=outlinecolor, text=background, draw=outlinecolor, rounded corners] at (box.north west) {Hooks};
+\end{tikzpicture}
